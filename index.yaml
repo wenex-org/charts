@@ -3,12 +3,12 @@ entries:
   platform:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-03-30T20:03:35.501218546+03:30"
+    created: "2025-03-31T11:35:07.926347912+03:30"
     description: A Helm chart for Kubernetes
-    digest: 10109d8e3a5041094b4718d24d5d1881d1f9cbc070e7747cf5087ea2def0520f
+    digest: 4d7d0b1dfcb9a9d899ff734ae22ef8b2d26f58b55652abe5a5663c48e26b78a0
     name: platform
     type: application
     urls:
     - platform-0.1.0.tgz
     version: 0.1.0
-generated: "2025-03-30T20:03:35.500631038+03:30"
+generated: "2025-03-31T11:35:07.925107326+03:30"
