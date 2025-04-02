@@ -1,4 +1,4 @@
-This repository hosts Helm charts for deploying wenex to Kubernetes clusters.
+This repository hosts Helm charts for deploying Wenex to Kubernetes clusters.
 
 ## Getting Started
 
