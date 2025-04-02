@@ -109,29 +109,29 @@ global:
       host: platform-dispatcher.wenex-platform.svc.cluster.local
 
 auth:
-  enabled: false
+  enabled: true
 domain:
-  enabled: false
+  enabled: true
 context:
-  enabled: false
+  enabled: true
 essential:
-  enabled: false
+  enabled: true
 financial:
-  enabled: false
+  enabled: true
 general:
-  enabled: false
+  enabled: true
 identity:
-  enabled: false
+  enabled: true
 special:
-  enabled: false
+  enabled: true
 touch:
-  enabled: false
+  enabled: true
 
 watcher:
-  enabled: false
+  enabled: true
 observer:
-  enabled: false
+  enabled: true
 preserver:
-  enabled: false
+  enabled: true
 dispatcher:
-  enabled: false
+  enabled: true

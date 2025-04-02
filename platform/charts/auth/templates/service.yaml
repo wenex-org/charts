@@ -8,12 +8,12 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - name: {{ (index .Values.service.ports 0).name | default "http" | quote }}
-      port: {{ (index .Values.service.ports 0).port | default "80" | quote }}
-      targetPort: {{ .Values.global.configuration.auth.api | default "80" | quote  }}
+      port: {{ (index .Values.service.ports 0).port | default 80 | int }}
+      targetPort: {{ .Values.global.configuration.auth.api | default 80 | int }}
       protocol: {{ (index .Values.service.ports 0).protocol | default "TCP" | quote | upper }}
     - name: {{ (index .Values.service.ports 1).name | default "grpc" | quote }}
-      port: {{ (index .Values.service.ports 1).port | default "8080" | quote }}
-      targetPort: {{ .Values.global.configuration.auth.grpc | default "8080" | quote  }}
+      port: {{ (index .Values.service.ports 1).port | default 8080 | int }}
+      targetPort: {{ .Values.global.configuration.auth.grpc | default 8080 | int }}
       protocol: {{ (index .Values.service.ports 1).protocol | default "TCP" | quote | upper }}
   selector:
     {{- include "auth.selectorLabels" . | nindent 4 }}
