@@ -2,13 +2,14 @@ apiVersion: v1
 entries:
   platform:
   - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2025-03-31T11:35:07.926347912+03:30"
+    appVersion: 1.0.0
+    created: "2025-04-02T07:57:05.168502892+03:30"
     description: A Helm chart for Kubernetes
-    digest: 4d7d0b1dfcb9a9d899ff734ae22ef8b2d26f58b55652abe5a5663c48e26b78a0
+    digest: 84c56daad42e7a7d92aac0c176b0082ef96027350e0a16ff14e7811b385b09e7
+    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
     name: platform
     type: application
     urls:
-    - platform-0.1.0.tgz
-    version: 0.1.0
-generated: "2025-03-31T11:35:07.925107326+03:30"
+    - platform-1.0.0.tgz
+    version: 1.0.0
+generated: "2025-04-02T07:57:05.168196587+03:30"
