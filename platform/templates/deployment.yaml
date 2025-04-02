@@ -43,6 +43,79 @@ spec:
           env:
             - name: SERVICE_NAME
               value: "gateway"
+            - name: OTLP_SERVICE_NAME
+              value: "gateway"
+            - name: ELASTIC_APM_SERVICE_NAME
+              value: "gateway"
+            # **********************
+            # Global Configuration
+            # **********************
+            - name: NODE_ENV
+              value: {{ .Values.global.config.nodeEnv | default "develop" }}
+            - name: DEBUG
+              value: {{ .Values.global.config.debug | default "wnx:*" }}
+            - name: TIMEOUT
+              value: {{ .Values.global.config.timeout | default 90000 }}
+            # **********************
+            # Internationalization
+            # **********************
+            - name: LOCALE
+              value: {{ .Values.global.config.locale | default "fa" }}
+            - name: REGION
+              value: {{ .Values.global.config.region | default "IR" }}
+            - name: TZ
+              value: {{ .Values.global.config.tz | default "Asia/Tehran" }}
+            # **********************
+            # Storage Services
+            # **********************
+            # Redis
+            - name: REDIS_HOST
+              value: {{ .Values.global.config.redis.host | quote }}
+            - name: REDIS_PORT
+              value: {{ .Values.global.config.redis.port | default 6379 }}
+            - name: REDIS_PREFIX
+              value: {{ .Values.global.config.redis.prefix | default "wnx" }}
+            - name: REDIS_PASSWORD
+              value: {{ .Values.global.config.redis.password | quote }}
+            # Minio
+            - name: MINIO_HOST
+              value: {{ .Values.global.config.minio.host | quote }}
+            - name: MINIO_PORT
+              value: {{ .Values.global.config.minio.port | default "80" }}
+            - name: MINIO_ACCESS_KEY
+              value: {{ .Values.global.config.minio.accessKey | quote }}
+            - name: MINIO_SECRET_KEY
+              value: {{ .Values.global.config.minio.secretKey | quote }}
+            # Mongo
+            - name: MONGO_HOST
+              value: {{ .Values.global.config.mongo.host | quote }}
+            - name: MONGO_DB
+              value: {{ .Values.global.config.mongo.db | default "wenex" }}
+            - name: MONGO_PREFIX
+              value: {{ .Values.global.config.mongo.prefix | default "wnx" }}
+            - name: MONGO_USER
+              value: {{ .Values.global.config.mongo.user | quote }}
+            - name: MONGO_PASS
+              value: {{ .Values.global.config.mongo.pass | quote }}
+            - name: MONGO_QUERY
+              value: {{ .Values.global.config.mongo.query | default "replicaSet=rs0&authSource=admin" }}
+            # **********************
+            # Broker Services
+            # **********************
+            # Kafka
+            - name: KAFKA_HOST
+              value: {{ .Values.global.config.kafka.host | quote }}
+            - name: KAFKA_PORT
+              value: {{ .Values.global.config.kafka.host | default 9092 }}
+            # EMQX
+            - name: EMQX_USERNAME
+              value: {{ .Values.global.config.emqx.username | quote }}
+            - name: EMQX_PASSWORD
+              value: {{ .Values.global.config.emqx.password | quote }}
+            - name: EMQX_EXHOOK_URL
+              value: {{ .Values.global.config.emqx.exhookUrl | default "http://platform-preserver.wenex-platform.svc.cluster.local:6030" }}
+            - name: EMQX_BASE_URL
+              value: {{ .Values.global.config.emqx.baseUrl | default "http://emqx-dashboard.emqx-operator-system.svc.cluster.local:18083/api/v5" }}
           ports:
             - name: http
               containerPort: {{ .Values.service.targetPort }}
