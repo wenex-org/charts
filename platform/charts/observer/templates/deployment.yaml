@@ -51,10 +51,10 @@ spec:
             {{- include "platform.global.configuration" . | nindent 12 }}
           ports:
             - name: http
-              containerPort: 4020
+              containerPort: {{ .Values.global.configuration.observer.api | default "80" | quote  }}
               protocol: TCP
             - name: grpc
-              containerPort: 6020
+              containerPort: {{ .Values.global.configuration.observer.grpc | default "8080" | quote  }}
               protocol: TCP
           {{- with .Values.livenessProbe }}
           livenessProbe:

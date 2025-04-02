@@ -6,9 +6,14 @@ metadata:
     {{- include "financial.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
-  {{- with .Values.service.ports }}
   ports:
-    {{- toYaml . | nindent 4 }}
-  {{- end }}
+    - name: {{ (index .Values.service.ports 0).name | default "http" | quote }}
+      port: {{ (index .Values.service.ports 0).port | default "80" | quote }}
+      targetPort: {{ .Values.global.configuration.financial.api | default "80" | quote  }}
+      protocol: {{ (index .Values.service.ports 0).protocol | default "TCP" | quote | upper }}
+    - name: {{ (index .Values.service.ports 1).name | default "grpc" | quote }}
+      port: {{ (index .Values.service.ports 1).port | default "8080" | quote }}
+      targetPort: {{ .Values.global.configuration.financial.grpc | default "8080" | quote  }}
+      protocol: {{ (index .Values.service.ports 1).protocol | default "TCP" | quote | upper }}
   selector:
     {{- include "financial.selectorLabels" . | nindent 4 }}

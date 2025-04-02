@@ -12,11 +12,9 @@ service:
   type: ClusterIP
   ports:
     - port: 80
-      targetPort: 3080
       protocol: TCP
       name: http
     - port: 8080
-      targetPort: 5080
       protocol: TCP
       name: grpc
 
