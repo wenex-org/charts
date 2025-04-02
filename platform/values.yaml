@@ -99,6 +99,15 @@ configuration:
   touch:
     host: platform-touch.wenex-platform.svc.cluster.local
 
+  watcher:
+    host: platform-watcher.wenex-platform.svc.cluster.local
+  observer:
+    host: platform-observer.wenex-platform.svc.cluster.local
+  preserver:
+    host: platform-preserver.wenex-platform.svc.cluster.local
+  dispatcher:
+    host: platform-dispatcher.wenex-platform.svc.cluster.local
+
 auth:
   enabled: false
 domain:
@@ -116,4 +125,13 @@ identity:
 special:
   enabled: false
 touch:
+  enabled: false
+
+watcher:
+  enabled: false
+observer:
+  enabled: false
+preserver:
+  enabled: false
+dispatcher:
   enabled: false

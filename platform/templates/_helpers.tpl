@@ -145,7 +145,7 @@ Create the environments variable
 - name: EMQX_PASSWORD
   value: {{ .Values.environments.emqx.password | quote }}
 - name: EMQX_EXHOOK_URL
-  value: {{ .Values.environments.emqx.exhookUrl | default "http://platform-preserver.wenex-platform.svc.cluster.local:6030" | quote }}
+  value: {{ .Values.environments.emqx.exhookUrl | default "http://platform-preserver.wenex-platform.svc.cluster.local:8080" | quote }}
 - name: EMQX_BASE_URL
   value: {{ .Values.environments.emqx.baseUrl | default "http://emqx-dashboard.emqx-operator-system.svc.cluster.local:18083/api/v5" | quote }}
 {{- end }}

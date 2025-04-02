@@ -1,0 +1,27 @@
+enabled: false
+
+replicaCount: 3
+
+fullnameOverride: "platform-dispatcher"
+
+serviceAccount:
+  create: true
+  automount: true
+
+service:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 4010
+      protocol: TCP
+      name: http
+    - port: 8080
+      targetPort: 6010
+      protocol: TCP
+      name: grpc
+
+ingress:
+  enabled: false
+
+autoscaling:
+  enabled: false
