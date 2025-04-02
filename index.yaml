@@ -3,18 +3,50 @@ entries:
   platform:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-04-02T13:26:35.943637876+03:30"
+    created: "2025-04-02T15:11:54.984703041+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
       repository: file://charts/auth
       version: 1.0.0
+    - condition: domain.enabled
+      name: domain
+      repository: file://charts/domain
+      version: 1.0.0
+    - condition: context.enabled
+      name: context
+      repository: file://charts/context
+      version: 1.0.0
+    - condition: essential.enabled
+      name: essential
+      repository: file://charts/essential
+      version: 1.0.0
+    - condition: financial.enabled
+      name: financial
+      repository: file://charts/financial
+      version: 1.0.0
+    - condition: general.enabled
+      name: general
+      repository: file://charts/general
+      version: 1.0.0
+    - condition: identity.enabled
+      name: identity
+      repository: file://charts/identity
+      version: 1.0.0
+    - condition: special.enabled
+      name: special
+      repository: file://charts/special
+      version: 1.0.0
+    - condition: touch.enabled
+      name: touch
+      repository: file://charts/touch
+      version: 1.0.0
     description: A Helm chart for Kubernetes
-    digest: ae85c9ed3d40791e04d5d52d0b028025da9473894d83c409f799e2529d2a7f7f
+    digest: 4733bcfd103fcf24a9c0c68a2cee2af74df36a0f8f7ca1ec511dd6b485b51d17
     icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
     name: platform
     type: application
     urls:
     - platform-1.0.0.tgz
     version: 1.0.0
-generated: "2025-04-02T13:26:35.942954018+03:30"
+generated: "2025-04-02T15:11:54.98214112+03:30"

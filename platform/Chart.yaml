@@ -11,5 +11,37 @@ dependencies:
     version: 1.0.0
     condition: auth.enabled
     repository: file://charts/auth
+  - name: domain
+    version: 1.0.0
+    condition: domain.enabled
+    repository: file://charts/domain
+  - name: context
+    version: 1.0.0
+    condition: context.enabled
+    repository: file://charts/context
+  - name: essential
+    version: 1.0.0
+    condition: essential.enabled
+    repository: file://charts/essential
+  - name: financial
+    version: 1.0.0
+    condition: financial.enabled
+    repository: file://charts/financial
+  - name: general
+    version: 1.0.0
+    condition: general.enabled
+    repository: file://charts/general
+  - name: identity
+    version: 1.0.0
+    condition: identity.enabled
+    repository: file://charts/identity
+  - name: special
+    version: 1.0.0
+    condition: special.enabled
+    repository: file://charts/special
+  - name: touch
+    version: 1.0.0
+    condition: touch.enabled
+    repository: file://charts/touch
 
 icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x

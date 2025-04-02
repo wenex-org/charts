@@ -46,7 +46,7 @@ environments:
     port: 6379
     prefix: "wnx"
     password: "6Xu9rdP1g0267vDR5t6l4A2D9BYAMfUKimFCgBZr"
-  
+
   # Minio
   minio:
     host: "minio.minio-tenant.svc.cluster.local"
@@ -71,7 +71,7 @@ environments:
   kafka:
     host: "wenex-kafka-bootstrap.kafka.svc.cluster.local"
     port: 9092
-  
+
   # EMQX
   emqx:
     username: "admin"
@@ -82,6 +82,38 @@ environments:
 configuration:
   auth:
     host: platform-auth.wenex-platform.svc.cluster.local
+  domain:
+    host: platform-domain.wenex-platform.svc.cluster.local
+  context:
+    host: platform-context.wenex-platform.svc.cluster.local
+  essential:
+    host: platform-essential.wenex-platform.svc.cluster.local
+  financial:
+    host: platform-financial.wenex-platform.svc.cluster.local
+  general:
+    host: platform-general.wenex-platform.svc.cluster.local
+  identity:
+    host: platform-identity.wenex-platform.svc.cluster.local
+  special:
+    host: platform-special.wenex-platform.svc.cluster.local
+  touch:
+    host: platform-touch.wenex-platform.svc.cluster.local
 
 auth:
+  enabled: false
+domain:
+  enabled: false
+context:
+  enabled: false
+essential:
+  enabled: false
+financial:
+  enabled: false
+general:
+  enabled: false
+identity:
+  enabled: false
+special:
+  enabled: false
+touch:
   enabled: false
