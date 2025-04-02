@@ -3,13 +3,18 @@ entries:
   platform:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-04-02T10:32:58.290327246+03:30"
+    created: "2025-04-02T13:02:06.44329215+03:30"
+    dependencies:
+    - condition: auth.enabled
+      name: auth
+      repository: file://charts/auth
+      version: 1.0.0
     description: A Helm chart for Kubernetes
-    digest: ecc944b5c858a35875a55050f1a305dfe05e792e748d0895862cc2cc3eefa039
+    digest: 1786093c308acba3189fe2e14b4fd7e394981f854bd20c445175cdcc8a748a5e
     icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
     name: platform
     type: application
     urls:
     - platform-1.0.0.tgz
     version: 1.0.0
-generated: "2025-04-02T10:32:58.289870101+03:30"
+generated: "2025-04-02T13:02:06.442711646+03:30"

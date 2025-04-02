@@ -1,10 +1,5 @@
 replicaCount: 3
 
-image:
-  repository: wenex/platform
-  pullPolicy: IfNotPresent
-  tag: "1.0.0"
-
 fullnameOverride: "platform-gateway"
 
 serviceAccount:
@@ -23,6 +18,11 @@ autoscaling:
   enabled: false
 
 global:
+  image:
+    repository: wenex/platform
+    pullPolicy: IfNotPresent
+    tag: "1.0.0"
+
   config:
     debug: "wnx:*"
     timeout: 90000
@@ -78,3 +78,10 @@ global:
       password: "qHDZSxtyu7vWfc-YLGVCAMBU9E3NQr5Fn8_k2w6spaX!dj@4"
       exhookUrl: "http://platform-preserver.wenex-platform.svc.cluster.local:6030"
       baseUrl: "http://emqx-dashboard.emqx-operator-system.svc.cluster.local:18083/api/v5"
+  
+  services:
+    auth:
+      host: platform-auth.wenex-platform.svc.cluster.local
+
+auth:
+  enabled: false
