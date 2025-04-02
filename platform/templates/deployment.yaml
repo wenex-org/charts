@@ -51,20 +51,20 @@ spec:
             # Global Configuration
             # **********************
             - name: NODE_ENV
-              value: {{ .Values.global.config.nodeEnv | default "develop" }}
+              value: {{ .Values.global.config.nodeEnv | default "develop" | quote }}
             - name: DEBUG
-              value: {{ .Values.global.config.debug | default "wnx:*" }}
+              value: {{ .Values.global.config.debug | default "wnx:*" | quote }}
             - name: TIMEOUT
-              value: {{ .Values.global.config.timeout | default "90000" }}
+              value: {{ .Values.global.config.timeout | default "90000" | quote }}
             # **********************
             # Internationalization
             # **********************
             - name: LOCALE
-              value: {{ .Values.global.config.locale | default "fa" }}
+              value: {{ .Values.global.config.locale | default "fa" | quote }}
             - name: REGION
-              value: {{ .Values.global.config.region | default "IR" }}
+              value: {{ .Values.global.config.region | default "IR" | quote }}
             - name: TZ
-              value: {{ .Values.global.config.tz | default "Asia/Tehran" }}
+              value: {{ .Values.global.config.tz | default "Asia/Tehran" | quote }}
             # **********************
             # Storage Services
             # **********************
@@ -72,16 +72,16 @@ spec:
             - name: REDIS_HOST
               value: {{ .Values.global.config.redis.host | quote }}
             - name: REDIS_PORT
-              value: {{ .Values.global.config.redis.port | default "6379" }}
+              value: {{ .Values.global.config.redis.port | default "6379" | quote }}
             - name: REDIS_PREFIX
-              value: {{ .Values.global.config.redis.prefix | default "wnx" }}
+              value: {{ .Values.global.config.redis.prefix | default "wnx" | quote }}
             - name: REDIS_PASSWORD
               value: {{ .Values.global.config.redis.password | quote }}
             # Minio
             - name: MINIO_HOST
               value: {{ .Values.global.config.minio.host | quote }}
             - name: MINIO_PORT
-              value: {{ .Values.global.config.minio.port | default "80" }}
+              value: {{ .Values.global.config.minio.port | default "80" | quote }}
             - name: MINIO_ACCESS_KEY
               value: {{ .Values.global.config.minio.accessKey | quote }}
             - name: MINIO_SECRET_KEY
@@ -90,15 +90,15 @@ spec:
             - name: MONGO_HOST
               value: {{ .Values.global.config.mongo.host | quote }}
             - name: MONGO_DB
-              value: {{ .Values.global.config.mongo.db | default "wenex" }}
+              value: {{ .Values.global.config.mongo.db | default "wenex" | quote }}
             - name: MONGO_PREFIX
-              value: {{ .Values.global.config.mongo.prefix | default "wnx" }}
+              value: {{ .Values.global.config.mongo.prefix | default "wnx" | quote }}
             - name: MONGO_USER
               value: {{ .Values.global.config.mongo.user | quote }}
             - name: MONGO_PASS
               value: {{ .Values.global.config.mongo.pass | quote }}
             - name: MONGO_QUERY
-              value: {{ .Values.global.config.mongo.query | default "replicaSet=rs0&authSource=admin" }}
+              value: {{ .Values.global.config.mongo.query | default "replicaSet=rs0&authSource=admin" | quote }}
             # **********************
             # Broker Services
             # **********************
@@ -106,16 +106,16 @@ spec:
             - name: KAFKA_HOST
               value: {{ .Values.global.config.kafka.host | quote }}
             - name: KAFKA_PORT
-              value: {{ .Values.global.config.kafka.port | default "9092" }}
+              value: {{ .Values.global.config.kafka.port | default "9092" | quote }}
             # EMQX
             - name: EMQX_USERNAME
               value: {{ .Values.global.config.emqx.username | quote }}
             - name: EMQX_PASSWORD
               value: {{ .Values.global.config.emqx.password | quote }}
             - name: EMQX_EXHOOK_URL
-              value: {{ .Values.global.config.emqx.exhookUrl | default "http://platform-preserver.wenex-platform.svc.cluster.local:6030" }}
+              value: {{ .Values.global.config.emqx.exhookUrl | default "http://platform-preserver.wenex-platform.svc.cluster.local:6030" | quote }}
             - name: EMQX_BASE_URL
-              value: {{ .Values.global.config.emqx.baseUrl | default "http://emqx-dashboard.emqx-operator-system.svc.cluster.local:18083/api/v5" }}
+              value: {{ .Values.global.config.emqx.baseUrl | default "http://emqx-dashboard.emqx-operator-system.svc.cluster.local:18083/api/v5" | quote }}
           ports:
             - name: http
               containerPort: {{ .Values.service.targetPort }}
