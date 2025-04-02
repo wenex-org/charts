@@ -55,7 +55,7 @@ spec:
             - name: DEBUG
               value: {{ .Values.global.config.debug | default "wnx:*" }}
             - name: TIMEOUT
-              value: {{ .Values.global.config.timeout | default 90000 }}
+              value: {{ .Values.global.config.timeout | default "90000" }}
             # **********************
             # Internationalization
             # **********************
@@ -72,7 +72,7 @@ spec:
             - name: REDIS_HOST
               value: {{ .Values.global.config.redis.host | quote }}
             - name: REDIS_PORT
-              value: {{ .Values.global.config.redis.port | default 6379 }}
+              value: {{ .Values.global.config.redis.port | default "6379" }}
             - name: REDIS_PREFIX
               value: {{ .Values.global.config.redis.prefix | default "wnx" }}
             - name: REDIS_PASSWORD
@@ -106,7 +106,7 @@ spec:
             - name: KAFKA_HOST
               value: {{ .Values.global.config.kafka.host | quote }}
             - name: KAFKA_PORT
-              value: {{ .Values.global.config.kafka.host | default 9092 }}
+              value: {{ .Values.global.config.kafka.port | default "9092" }}
             # EMQX
             - name: EMQX_USERNAME
               value: {{ .Values.global.config.emqx.username | quote }}
