@@ -3,7 +3,7 @@ entries:
   platform:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-04-02T15:45:09.305337926+03:30"
+    created: "2025-04-02T15:49:38.698260626+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -41,12 +41,28 @@ entries:
       name: touch
       repository: file://charts/touch
       version: 1.0.0
+    - condition: watcher.enabled
+      name: watcher
+      repository: file://charts/watcher
+      version: 1.0.0
+    - condition: observer.enabled
+      name: observer
+      repository: file://charts/observer
+      version: 1.0.0
+    - condition: preserver.enabled
+      name: preserver
+      repository: file://charts/preserver
+      version: 1.0.0
+    - condition: dispatcher.enabled
+      name: dispatcher
+      repository: file://charts/dispatcher
+      version: 1.0.0
     description: A Helm chart for Kubernetes
-    digest: f742bef7777eaa67674c9decf4edef36eb173f559a8546208dc868756ff804d9
+    digest: 41c81a93e914786a2369039576a005bbd8ecd164ed726dfc79b10e72f9b33c7d
     icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
     name: platform
     type: application
     urls:
     - platform-1.0.0.tgz
     version: 1.0.0
-generated: "2025-04-02T15:45:09.303007069+03:30"
+generated: "2025-04-02T15:49:38.69586327+03:30"

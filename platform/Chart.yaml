@@ -44,4 +44,21 @@ dependencies:
     condition: touch.enabled
     repository: file://charts/touch
 
+  - name: watcher
+    version: 1.0.0
+    condition: watcher.enabled
+    repository: file://charts/watcher
+  - name: observer
+    version: 1.0.0
+    condition: observer.enabled
+    repository: file://charts/observer
+  - name: preserver
+    version: 1.0.0
+    condition: preserver.enabled
+    repository: file://charts/preserver
+  - name: dispatcher
+    version: 1.0.0
+    condition: dispatcher.enabled
+    repository: file://charts/dispatcher
+
 icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
