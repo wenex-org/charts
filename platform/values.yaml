@@ -37,6 +37,13 @@ global:
     tz: "Asia/Tehran"
 
     # **********************
+    # Logging Services
+    # **********************
+
+    # Sentry
+    sentry: {}
+
+    # **********************
     # Storage Services
     # **********************
 
@@ -78,6 +85,20 @@ global:
       password: "qHDZSxtyu7vWfc-YLGVCAMBU9E3NQr5Fn8_k2w6spaX!dj@4"
       exhookUrl: "http://platform-preserver.wenex-platform.svc.cluster.local:8080"
       baseUrl: "http://emqx-dashboard.emqx-operator-system.svc.cluster.local:18083/api/v5"
+
+    # **********************
+    # Telemetry Services
+    # **********************
+
+    # OpenTelemetry
+    otlp: {}
+
+    # **********************
+    # APM Service
+    # **********************
+
+    # Elastic APM
+    apm: {}
 
   configuration:
     auth:

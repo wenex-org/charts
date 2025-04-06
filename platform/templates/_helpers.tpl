@@ -69,9 +69,9 @@ Create the configuration variables
 - name: {{ $service | upper }}_HOST
   value: {{ $config.host | quote }}
 - name: {{ $service | upper }}_API_PORT
-  value: {{ $config.api | default "80" | quote }}
+  value: {{ $config.api | default 80 | int }}
 - name: {{ $service | upper }}_GRPC_PORT
-  value: {{ $config.grpc | default "8080" | quote }}
+  value: {{ $config.grpc | default 8080 | int }}
 {{- end }}
 {{- end }}
 
@@ -87,7 +87,7 @@ Create the environments variable
 - name: DEBUG
   value: {{ .Values.global.environments.debug | default "wnx:*" | quote }}
 - name: TIMEOUT
-  value: {{ .Values.global.environments.timeout | default "90000" | quote }}
+  value: {{ .Values.global.environments.timeout | default 90000 | int }}
 # **********************
 # Internationalization
 # **********************
@@ -98,13 +98,23 @@ Create the environments variable
 - name: TZ
   value: {{ .Values.global.environments.tz | default "Asia/Tehran" | quote }}
 # **********************
+# Logging Services
+# **********************
+# Sentry
+- name: SENTRY_DSN
+  value: {{ .Values.global.environments.sentry.dsn | quote }}
+- name: SENTRY_MAX_BREADCRUMBS
+  value: {{ .Values.global.environments.sentry.maxBreadcrumbs | default 10 | int }}
+- name: SENTRY_TRACES_SAMPLE_RATE
+  value: {{ .Values.global.environments.sentry.tracesSampleRate | default 1.0 | int }}
+# **********************
 # Storage Services
 # **********************
 # Redis
 - name: REDIS_HOST
   value: {{ .Values.global.environments.redis.host | quote }}
 - name: REDIS_PORT
-  value: {{ .Values.global.environments.redis.port | default "6379" | quote }}
+  value: {{ .Values.global.environments.redis.port | default 6379 | int }}
 - name: REDIS_PREFIX
   value: {{ .Values.global.environments.redis.prefix | default "wnx" | quote }}
 - name: REDIS_PASSWORD
@@ -113,7 +123,7 @@ Create the environments variable
 - name: MINIO_HOST
   value: {{ .Values.global.environments.minio.host | quote }}
 - name: MINIO_PORT
-  value: {{ .Values.global.environments.minio.port | default "80" | quote }}
+  value: {{ .Values.global.environments.minio.port | default 80 | int }}
 - name: MINIO_ACCESS_KEY
   value: {{ .Values.global.environments.minio.accessKey | quote }}
 - name: MINIO_SECRET_KEY
@@ -138,7 +148,7 @@ Create the environments variable
 - name: KAFKA_HOST
   value: {{ .Values.global.environments.kafka.host | quote }}
 - name: KAFKA_PORT
-  value: {{ .Values.global.environments.kafka.port | default "9092" | quote }}
+  value: {{ .Values.global.environments.kafka.port | default 9092 | int }}
 # EMQX
 - name: EMQX_USERNAME
   value: {{ .Values.global.environments.emqx.username | quote }}
@@ -148,4 +158,22 @@ Create the environments variable
   value: {{ .Values.global.environments.emqx.exhookUrl | default "http://platform-preserver.wenex-platform.svc.cluster.local:8080" | quote }}
 - name: EMQX_BASE_URL
   value: {{ .Values.global.environments.emqx.baseUrl | default "http://emqx-dashboard.emqx-operator-system.svc.cluster.local:18083/api/v5" | quote }}
+# **********************
+# Telemetry Services
+# **********************
+# OpenTelemetry
+- name: OTLP_PORT
+  value: {{ .Values.global.environments.otlp.port | default 4318 | int }}
+- name: OTLP_HOST
+  value: {{ .Values.global.environments.otlp.host | default "localhost" | quote }}
+# **********************
+# APM Service
+# **********************
+# Elastic APM
+- name: ELASTIC_APM_SERVER_URL
+  value: {{ .Values.global.environments.apm.serverUrl | default "https://localhost:8200" | quote }}
+- name: ELASTIC_APM_SECRET_TOKEN
+  value: {{ .Values.global.environments.apm.secretToken | default "secrettokengoeshere" | quote }}
+- name: ELASTIC_APM_VERIFY_SERVER_CERT
+  value: {{ .Values.global.environments.apm.verifyServerCert | default "false" | quote }}
 {{- end }}
