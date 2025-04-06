@@ -62,16 +62,6 @@ Create the name of the service account to use
 {{- end }}
 
 {{/*
-Create the configuration variables
-*/}}
-{{- define "client.global.configuration" -}}
-{{- range $service, $config := .Values.global.configuration }}
-- name: {{ $service | upper }}_API_PORT
-  value: {{ $config.api | default "80" | quote }}
-{{- end }}
-{{- end }}
-
-{{/*
 Create the environments variable
 */}}
 {{- define "client.global.environments" -}}

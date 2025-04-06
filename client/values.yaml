@@ -149,11 +149,9 @@ global:
     # Elastic APM
     apm: {}
 
-  configuration:
-    services:
-      host: platform-auth.wenex-platform.svc.cluster.local
-    workers:
-      host: platform-domain.wenex-platform.svc.cluster.local
-
-    frontend:
-      host: platform-domain.wenex-platform.svc.cluster.local
+assets:
+  enabled: false
+services:
+  enabled: false
+workers:
+  enabled: false

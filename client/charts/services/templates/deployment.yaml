@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "client.fullname" . }}
+  name: {{ include "services.fullname" . }}
   labels:
-    {{- include "client.labels" . | nindent 4 }}
+    {{- include "services.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "client.selectorLabels" . | nindent 6 }}
+      {{- include "services.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,7 +18,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "client.labels" . | nindent 8 }}
+        {{- include "services.labels" . | nindent 8 }}
         {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
@@ -27,7 +27,7 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "client.serviceAccountName" . }}
+      serviceAccountName: {{ include "services.serviceAccountName" . }}
       {{- with .Values.podSecurityContext }}
       securityContext:
         {{- toYaml . | nindent 8 }}
@@ -42,11 +42,11 @@ spec:
           imagePullPolicy: {{ .Values.global.image.pullPolicy }}
           env:
             - name: SERVICE_NAME
-              value: "gateway"
+              value: "services"
             - name: OTLP_SERVICE_NAME
-              value: "gateway"
+              value: "services"
             - name: ELASTIC_APM_SERVICE_NAME
-              value: "gateway"
+              value: "services"
             {{- include "client.global.environments" . | nindent 12 }}
           ports:
             - name: http
