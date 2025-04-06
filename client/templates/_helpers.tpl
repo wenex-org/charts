@@ -67,7 +67,7 @@ Create the configuration variables
 {{- define "client.global.configuration" -}}
 {{- range $service, $config := .Values.global.configuration }}
 - name: {{ $service | upper }}_API_PORT
-  value: {{ $config.api | default 80 | int }}
+  value: {{ $config.api | default "80" | quote }}
 {{- end }}
 {{- end }}
 
@@ -83,7 +83,7 @@ Create the environments variable
 - name: DEBUG
   value: {{ .Values.global.environments.debug | default "clt:*" | quote }}
 - name: TIMEOUT
-  value: {{ .Values.global.environments.timeout | default 90000 | int }}
+  value: {{ .Values.global.environments.timeout | default "90000" | quote }}
 # **********************
 # Internationalization
 # **********************
@@ -154,9 +154,9 @@ Create the environments variable
 - name: SENTRY_DSN
   value: {{ .Values.global.environments.sentry.dsn | default "" | quote }}
 - name: SENTRY_MAX_BREADCRUMBS
-  value: {{ .Values.global.environments.sentry.maxBreadcrumbs | default 10 | int }}
+  value: {{ .Values.global.environments.sentry.maxBreadcrumbs | default "10" | quote }}
 - name: SENTRY_TRACES_SAMPLE_RATE
-  value: {{ .Values.global.environments.sentry.tracesSampleRate | default 1.0 | int }}
+  value: {{ .Values.global.environments.sentry.tracesSampleRate | default "1.0" | quote }}
 # **********************
 # Storage Services
 # **********************
@@ -164,9 +164,9 @@ Create the environments variable
 - name: REDIS_HOST
   value: {{ .Values.global.environments.redis.host | quote }}
 - name: REDIS_PORT
-  value: {{ .Values.global.environments.redis.port | default 6379 | int }}
+  value: {{ .Values.global.environments.redis.port | default "6379" | quote }}
 - name: REDIS_PREFIX
-  value: {{ .Values.global.environments.redis.prefix | default "wnx" | quote }}
+  value: {{ .Values.global.environments.redis.prefix | default "clt" | quote }}
 - name: REDIS_PASSWORD
   value: {{ .Values.global.environments.redis.password | quote }}
 # Mongo
@@ -187,7 +187,7 @@ Create the environments variable
 # **********************
 # Nats
 - name: NATS_TIMEOUT
-  value: {{ .Values.global.environments.nats.timeout | default 90000 | int }}
+  value: {{ .Values.global.environments.nats.timeout | default "90000" | quote }}
 - name: NATS_SERVERS
   value: {{ .Values.global.environments.nats.servers | default "nats://nats:4222" | quote }}
 # *****************************
@@ -205,7 +205,7 @@ Create the environments variable
 # **********************
 # OpenTelemetry
 - name: OTLP_PORT
-  value: {{ .Values.global.environments.otlp.port | default 4318 | int }}
+  value: {{ .Values.global.environments.otlp.port | default "4318" | quote }}
 - name: OTLP_HOST
   value: {{ .Values.global.environments.otlp.host | default "localhost" | quote }}
 # **********************
