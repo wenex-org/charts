@@ -155,3 +155,10 @@ services:
   enabled: false
 workers:
   enabled: false
+
+frontend:
+  enabled: false
+  image:
+    repository: vhidvz/client-frontend
+    tag: "1.0.0"
+  imagePullSecrets: []

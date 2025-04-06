@@ -21,9 +21,9 @@ dependencies:
     condition: assets.enabled
     repository: file://charts/assets
 
-#   - name: frontend
-#     version: 1.0.0
-#     condition: frontend.enabled
-#     repository: file://charts/frontend
+  - name: frontend
+    version: 1.0.0
+    condition: frontend.enabled
+    repository: file://charts/frontend
 
 icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
