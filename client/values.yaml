@@ -54,7 +54,7 @@ global:
       client:
         id: "932594562282-gieefbqm3csgj5k1850uivbbhavfj0ta.apps.googleusercontent.com"
         secret: "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"
-        redirectUri: "http://localhost:3000/oauth"
+        redirectUri: "https://w3x.app/oauth"
 
     # *****************************
     # Messaging Config
@@ -87,7 +87,7 @@ global:
       domain: "wenex.org"
       subject: "root@wenex.org"
 
-    platformUrl: "http://localhost:3010"
+    platformUrl: "http://platform-gateway.wenex-platform.svc.cluster.local"
     apiKey: "4U2nh6kBzVvjCoRvxoRiuLXkJAYJ7WR4AM8XnlO0ZZHbKl0zE6Er2iIVupILxPPSJ80cDgXf6XdlcpxeoW9a6qhe4slkh4ETyAHxxIcgdR3djTW0eXNxpgZJplQJu66KbMMa1Nweb61NVqtpJRfjzX5oSPDXe8OEvDSxFJt9KukArf35cvmy8Y5EAYTABLWUrN0t4zqcu1oAhULySiNWdsjryRsayRTBiKJXDyvs2r0mWNUqoXjLEXUPr.5YfPsyCkAZxSsqUYiUOOZE"
 
     # Backend
@@ -96,8 +96,8 @@ global:
 
     # Frontend
     frontend:
-      baseUrl: "http://localhost:3000"
-      assetsUrl: "http://localhost:8099"
+      baseUrl: "https://w3x.app"
+      assetsUrl: "https://assets.w3x.app"
 
     # **********************
     # Logging Services
@@ -133,7 +133,7 @@ global:
     # Nats
     nats:
       timeout: 90000
-      servers: "nats://localhost:4222"
+      servers: "nats://nats.nats.svc.cluster.local:4222"
 
     # **********************
     # Telemetry Services

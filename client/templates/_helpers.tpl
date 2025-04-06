@@ -126,7 +126,7 @@ Create the environments variable
 - name: ROOT_SUBJECT
   value: {{ .Values.global.environments.root.subject | default "root@wenex.org" | quote }}
 - name: PLATFORM_URL
-  value: {{ .Values.global.environments.platformUrl | default "http://localhost:3010" | quote }}
+  value: {{ .Values.global.environments.platformUrl | default "http://platform-gateway.wenex-platform.svc.cluster.local" | quote }}
 - name: API_KEY
   value: {{ .Values.global.environments.apiKey | default "4U2nh6kBzVvjCoRvxoRiuLXkJAYJ7WR4AM8XnlO0ZZHbKl0zE6Er2iIVupILxPPSJ80cDgXf6XdlcpxeoW9a6qhe4slkh4ETyAHxxIcgdR3djTW0eXNxpgZJplQJu66KbMMa1Nweb61NVqtpJRfjzX5oSPDXe8OEvDSxFJt9KukArf35cvmy8Y5EAYTABLWUrN0t4zqcu1oAhULySiNWdsjryRsayRTBiKJXDyvs2r0mWNUqoXjLEXUPr.5YfPsyCkAZxSsqUYiUOOZE" | quote }}
 # Backend
@@ -134,9 +134,9 @@ Create the environments variable
   value: {{ .Values.global.environments.backend.authorizationCqrs | default "1SsUFuq.X67aZIH_C1IjIxezA3/LVIuWc60CGueP@6qBi-MShv" | quote }}
 # Frontend
 - name: CLIENT_BASE_URL
-  value: {{ .Values.global.environments.frontend.baseUrl | default "http://localhost:3000" | quote }}
+  value: {{ .Values.global.environments.frontend.baseUrl | default "https://w3x.app" | quote }}
 - name: CLIENT_ASSETS_URL
-  value: {{ .Values.global.environments.frontend.assetsUrl | default "http://localhost:8099" | quote }}
+  value: {{ .Values.global.environments.frontend.assetsUrl | default "https://assets.w3x.app" | quote }}
 # **********************
 # Logging Services
 # **********************
@@ -179,7 +179,7 @@ Create the environments variable
 - name: NATS_TIMEOUT
   value: {{ .Values.global.environments.nats.timeout | default "90000" | quote }}
 - name: NATS_SERVERS
-  value: {{ .Values.global.environments.nats.servers | default "nats://nats:4222" | quote }}
+  value: {{ .Values.global.environments.nats.servers | default "nats://nats.nats.svc.cluster.local:4222" | quote }}
 # *****************************
 # OAuth Information
 # *****************************
@@ -189,7 +189,7 @@ Create the environments variable
 - name: GOOGLE_CLIENT_SECRET
   value: {{ .Values.global.environments.google.client.secret | default "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" | quote }}
 - name: GOOGLE_REDIRECT_URI
-  value: {{ .Values.global.environments.google.client.redirectUri | default "http://localhost:3000/oauth" | quote }}
+  value: {{ .Values.global.environments.google.client.redirectUri | default "https://w3x.app/oauth" | quote }}
 # **********************
 # Telemetry Services
 # **********************
