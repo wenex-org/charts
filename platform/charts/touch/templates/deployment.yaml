@@ -47,6 +47,7 @@ spec:
               value: "touch"
             - name: ELASTIC_APM_SERVICE_NAME
               value: "touch"
+            {{- include "platform.global.secrets" . | nindent 12 }}
             {{- include "platform.global.environments" . | nindent 12 }}
             {{- include "platform.global.configuration" . | nindent 12 }}
           ports:

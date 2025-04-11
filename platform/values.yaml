@@ -23,6 +23,14 @@ global:
     pullPolicy: IfNotPresent
     tag: "1.0.0"
 
+  secrets:
+    init:
+      rootPassword: "" # default: random 40 chars
+      clientSecret: "" # default: random 40 chars
+    aes: "" # default: random 64 chars
+    jwt: "" # default: random 64 chars
+    bcrypt: "" # default: random 32 chars
+
   environments:
     debug: "wnx:*"
     timeout: 90000

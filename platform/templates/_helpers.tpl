@@ -76,6 +76,43 @@ Create the configuration variables
 {{- end }}
 
 {{/*
+Create the secrets variable
+*/}}
+{{- define "platform.global.secrets" -}}
+# **********************
+# Initial Secrets
+# **********************
+- name: INIT_ROOT_PASSWORD
+  valueFrom:
+    secretKeyRef:
+      name: {{ include "platform.fullname" . }}-init-secrets
+      key: ROOT_PASSWORD
+- name: INIT_CLIENT_SECRET
+  valueFrom:
+    secretKeyRef:
+      name: {{ include "platform.fullname" . }}-init-secrets
+      key: CLIENT_SECRET
+# **********************
+# Application Secrets
+# **********************
+- name: AES_SECRET
+  valueFrom:
+    secretKeyRef:
+      name: {{ include "platform.fullname" . }}-secrets
+      key: AES_SECRET
+- name: JWT_SECRET
+  valueFrom:
+    secretKeyRef:
+      name: {{ include "platform.fullname" . }}-secrets
+      key: JWT_SECRET
+- name: BCRYPT_SALT
+  valueFrom:
+    secretKeyRef:
+      name: {{ include "platform.fullname" . }}-secrets
+      key: BCRYPT_SALT
+{{- end }}
+
+{{/*
 Create the environments variable
 */}}
 {{- define "platform.global.environments" -}}
