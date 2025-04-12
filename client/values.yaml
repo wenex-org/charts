@@ -114,14 +114,14 @@ global:
     redis:
       host: "redis-stack-master.redis.svc.cluster.local"
       port: 6379
-      prefix: "wnx"
+      prefix: "clt"
       password: "6Xu9rdP1g0267vDR5t6l4A2D9BYAMfUKimFCgBZr"
 
     # Mongo
     mongo:
       host: "psmdb-server-psmdb-db-rs0.mongodb.svc.cluster.local"
       db: "wenex"
-      prefix: "wnx"
+      prefix: "clt"
       user: "databaseAdmin"
       pass: "5outyK4QIGPBE6pX2G"
       query: "replicaSet=rs0&authSource=admin"
