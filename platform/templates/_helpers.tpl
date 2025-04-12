@@ -85,12 +85,12 @@ Create the secrets variable
 - name: INIT_ROOT_PASSWORD
   valueFrom:
     secretKeyRef:
-      name: {{ include "platform.fullname" . }}-init-secrets
+      name: platform-init-secrets
       key: ROOT_PASSWORD
 - name: INIT_CLIENT_SECRET
   valueFrom:
     secretKeyRef:
-      name: {{ include "platform.fullname" . }}-init-secrets
+      name: platform-init-secrets
       key: CLIENT_SECRET
 # **********************
 # Application Secrets
@@ -98,17 +98,17 @@ Create the secrets variable
 - name: AES_SECRET
   valueFrom:
     secretKeyRef:
-      name: {{ include "platform.fullname" . }}-secrets
+      name: platform-secrets
       key: AES_SECRET
 - name: JWT_SECRET
   valueFrom:
     secretKeyRef:
-      name: {{ include "platform.fullname" . }}-secrets
+      name: platform-secrets
       key: JWT_SECRET
 - name: BCRYPT_SALT
   valueFrom:
     secretKeyRef:
-      name: {{ include "platform.fullname" . }}-secrets
+      name: platform-secrets
       key: BCRYPT_SALT
 {{- end }}
 
