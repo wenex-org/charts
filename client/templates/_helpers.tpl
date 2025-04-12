@@ -62,6 +62,20 @@ Create the name of the service account to use
 {{- end }}
 
 {{/*
+Create the secrets variable
+*/}}
+{{- define "client.global.secrets" -}}
+# **********************
+# Application Secrets
+# **********************
+- name: AES_KEY
+  valueFrom:
+    secretKeyRef:
+      name: client-secrets
+      key: AES_KEY
+{{- end }}
+
+{{/*
 Create the environments variable
 */}}
 {{- define "client.global.environments" -}}

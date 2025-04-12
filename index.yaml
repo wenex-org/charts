@@ -3,7 +3,7 @@ entries:
   client:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-04-12T14:14:58.139778474+03:30"
+    created: "2025-04-12T15:44:52.116700081+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -22,7 +22,7 @@ entries:
       repository: file://charts/frontend
       version: 1.0.0
     description: A Helm chart for Kubernetes
-    digest: 3b1e8314a1429f0a6b02bde9f1d0f4b37471f14fdbf24dffe90053370e12fbe7
+    digest: c6027e7f90221af5e9e5a95dbd605fda85960e5910011333993c5951292ed7ad
     icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
     name: client
     type: application
@@ -32,7 +32,7 @@ entries:
   platform:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-04-12T14:14:58.145318692+03:30"
+    created: "2025-04-12T15:44:52.121112414+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -87,7 +87,7 @@ entries:
       repository: file://charts/dispatcher
       version: 1.0.1
     description: A Helm chart for Kubernetes
-    digest: 92a9b510c534fb4dc10e454223d11584e3e874b53245cee15cc7e4a6068c50ff
+    digest: 962420da4f099f1676f1c609002e8741d951cae32f7a7d7dc91bcb66127b9b83
     icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
     name: platform
     type: application
@@ -96,7 +96,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-04-12T14:14:58.143522584+03:30"
+    created: "2025-04-12T15:44:52.118616581+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -158,4 +158,4 @@ entries:
     urls:
     - platform-1.0.0.tgz
     version: 1.0.0
-generated: "2025-04-12T14:14:58.138750062+03:30"
+generated: "2025-04-12T15:44:52.115380543+03:30"

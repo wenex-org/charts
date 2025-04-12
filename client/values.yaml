@@ -23,6 +23,9 @@ global:
     pullPolicy: IfNotPresent
     tag: "1.0.0"
 
+  secrets:
+    aes: "" # default: random 64 chars
+
   environments:
     debug: "clt:*"
     timeout: 90000
