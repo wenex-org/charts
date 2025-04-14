@@ -64,7 +64,7 @@ Create the name of the service account to use
 {{/*
 Create the environments variable
 */}}
-{{- define "client.environments" -}}
+{{- define "frontend.environments" -}}
 - name: NUXT_PUBLIC_API_BASE_URL
   value: {{ .Values.environments.nuxt.public.apiBaseUrl | default "http://client-gateway.wenex-client.svc.cluster.local" | quote }}
 # *****************************
