@@ -1,4 +1,4 @@
-replicaCount: 3
+replicaCount: 2
 
 fullnameOverride: "client-gateway"
 
@@ -135,6 +135,8 @@ global:
 
     # Nats
     nats:
+      user: "w3x"
+      pass: "w3x"
       timeout: 90000
       servers: "nats://nats.nats.svc.cluster.local:4222"
 

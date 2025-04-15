@@ -177,7 +177,7 @@ Create the environments variable
 - name: MONGO_HOST
   value: {{ .Values.global.environments.mongo.host | quote }}
 - name: MONGO_DB
-  value: {{ .Values.global.environments.mongo.db | default "client" | quote }}
+  value: {{ .Values.global.environments.mongo.db | default "wenex" | quote }}
 - name: MONGO_PREFIX
   value: {{ .Values.global.environments.mongo.prefix | default "clt" | quote }}
 - name: MONGO_USER
@@ -190,6 +190,10 @@ Create the environments variable
 # Broker Services
 # **********************
 # Nats
+- name: NATS_USER
+  value: {{ .Values.global.environments.nats.user | default "w3x" | quote }}
+- name: NATS_PASS
+  value: {{ .Values.global.environments.nats.pass | default "w3x" | quote }}
 - name: NATS_TIMEOUT
   value: {{ .Values.global.environments.nats.timeout | default "90000" | quote }}
 - name: NATS_SERVERS
