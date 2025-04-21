@@ -25,6 +25,8 @@ global:
 
   secrets:
     aes: "" # default: random 64 chars
+    altcha:
+      hmacKey: "" # default: random 64 chars
 
   environments:
     debug: "clt:*"
@@ -40,15 +42,6 @@ global:
     tz: "Asia/Tehran"
 
     google:
-      # *****************************
-      # Security Config
-      # *****************************
-
-      # Google captcha
-      captcha:
-        key: "6LclmSUqAAAAAD0-92B1U9R3GH683BVZ0JlTDDf2"
-        secret: "6LclmSUqAAAAAIUVtI3vcLRUmBcqSOb_qYUZhc7q"
-
       # *****************************
       # OAuth Information
       # *****************************

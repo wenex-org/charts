@@ -73,6 +73,15 @@ Create the secrets variable
     secretKeyRef:
       name: client-secrets
       key: AES_KEY
+# **********************
+# Captcha Services
+# **********************
+# Altcha
+- name: ALTCHA_HMAC_KEY
+  valueFrom:
+      secretKeyRef:
+        name: client-secrets
+        key: HMAC_KEY
 {{- end }}
 
 {{/*
@@ -97,14 +106,6 @@ Create the environments variable
   value: {{ .Values.global.environments.region | default "IR" | quote }}
 - name: TZ
   value: {{ .Values.global.environments.tz | default "Asia/Tehran" | quote }}
-# *****************************
-# Security Config
-# *****************************
-# Google captcha
-- name: GOOGLE_CAPTCHA_KEY
-  value: {{ .Values.global.environments.google.captcha.key | default "6LclmSUqAAAAAD0-92B1U9R3GH683BVZ0JlTDDf2" | quote }}
-- name: GOOGLE_CAPTCHA_SECRET
-  value: {{ .Values.global.environments.google.captcha.secret | default "6LclmSUqAAAAAIUVtI3vcLRUmBcqSOb_qYUZhc7q" | quote }}
 # *****************************
 # Messaging Config
 # *****************************
