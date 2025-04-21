@@ -154,6 +154,12 @@ global:
     # Elastic APM
     apm: {}
 
+    # **********************
+    # Wenex Coworkers
+    # **********************
+
+    coworkers: [] # list of coworkers: /^([a-z]+:\w+,)+(\w+)$/
+
 assets:
   enabled: false
 services:

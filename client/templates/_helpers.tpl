@@ -226,4 +226,9 @@ Create the environments variable
   value: {{ .Values.global.environments.apm.secretToken | default "secrettokengoeshere" | quote }}
 - name: ELASTIC_APM_VERIFY_SERVER_CERT
   value: {{ .Values.global.environments.apm.verifyServerCert | default "false" | quote }}
+# **********************
+# Wenex Coworkers
+# **********************
+- name: COWORKERS
+  value: {{ .Values.global.environments.coworkers | toJson | quote }}
 {{- end }}
