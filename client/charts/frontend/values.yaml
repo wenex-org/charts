@@ -53,21 +53,18 @@ environments:
         dsn: ""
         auth: ""
 
-      google:
-        # *****************************
-        # OAuth Information
-        # *****************************
+      # *****************************
+      # Security Services
+      # *****************************
+      altcha:
+        challengeUrl: "http://client-gateway.wenex-client.svc.cluster.local/captcha/challenge"
 
+      # *****************************
+      # OAuth Information
+      # *****************************
+      google:
         # Google
         client:
           id: "932594562282-gieefbqm3csgj5k1850uivbbhavfj0ta.apps.googleusercontent.com"
           scope: "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"
-          redirectUri: "http://localhost:3000/oauth"
-
-        # *****************************
-        # Google reCAPTCHA
-        # *****************************
-
-        # Site key
-        captcha:
-          key: "6LclmSUqAAAAAD0-92B1U9R3GH683BVZ0JlTDDf2"
+          redirectUri: "http://frontend.w3x.app/oauth"

@@ -73,6 +73,11 @@ Create the environments variable
 - name: NUXT_PUBLIC_VAPID_PUBLIC_KEY
   value: {{ .Values.environments.nuxt.public.vapidPublicKey | default "BI6g0d-QKlNp2wWlCsUS8K49Y82Pc302yw5tcjhhMGaGoJsnjfz9uFp1dYjniJZCb62hdmqY32wcge9ieJI9GHw" | quote }}
 # *****************************
+# Security Services
+# *****************************
+- name: NUXT_PUBLIC_ALTCHA_CHALLENGE_URL
+  value: {{ .Values.environments.nuxt.public.altcha.challengeUrl | default "http://client-gateway.wenex-client.svc.cluster.local/captcha/challenge" | quote }}
+# *****************************
 # Client Information
 # *****************************
 - name: NUXT_PUBLIC_APP_ID
@@ -100,11 +105,5 @@ Create the environments variable
   value: {{ .Values.environments.nuxt.public.google.client.scope | default "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile" | quote }}
 - name: NUXT_PUBLIC_GOOGLE_REDIRECT_URI
   value: {{ .Values.environments.nuxt.public.google.client.redirectUri | default "http://localhost:3000/oauth" | quote }}
-# *****************************
-# Google reCAPTCHA
-# *****************************
-# Site key
-- name: NUXT_PUBLIC_GOOGLE_CAPTCHA_KEY
-  value: {{ .Values.environments.nuxt.public.google.captcha.key | default "6LclmSUqAAAAAD0-92B1U9R3GH683BVZ0JlTDDf2" | quote }}
 {{- end }}
 {{- end }}
