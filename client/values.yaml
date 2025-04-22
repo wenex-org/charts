@@ -41,12 +41,12 @@ global:
     region: "IR"
     tz: "Asia/Tehran"
 
-    google:
-      # *****************************
-      # OAuth Information
-      # *****************************
+    # *****************************
+    # OAuth Information
+    # *****************************
 
-      # Google
+    # Google
+    google:
       client:
         id: "932594562282-gieefbqm3csgj5k1850uivbbhavfj0ta.apps.googleusercontent.com"
         secret: "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"
