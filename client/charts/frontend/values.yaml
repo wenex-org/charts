@@ -57,7 +57,7 @@ environments:
       # Security Services
       # *****************************
       altcha:
-        challengeUrl: "http://client-gateway.wenex-client.svc.cluster.local/captcha/challenge"
+        challengeUrl: "http://client-gateway.wenex-client.svc.cluster.local/challenge"
 
       # *****************************
       # OAuth Information
