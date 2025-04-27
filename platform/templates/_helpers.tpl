@@ -117,7 +117,7 @@ Create the environments variable
 */}}
 {{- define "platform.global.environments" -}}
 - name: APP_VERSION
-  value: {{ .Values.global.image.tag | default "1.0.0" | quote }}
+  value: {{ .Values.global.image.tag | quote }}
 # **********************
 # Global Configuration
 # **********************
