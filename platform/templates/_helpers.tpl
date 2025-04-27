@@ -186,6 +186,8 @@ Create the environments variable
   value: {{ .Values.global.environments.kafka.host | quote }}
 - name: KAFKA_PORT
   value: {{ .Values.global.environments.kafka.port | default "9092" | quote }}
+- name: KAFKAJS_NO_PARTITIONER_WARNING
+  value: {{ .Values.global.environments.kafka.noPartitionerWarning | default "1" | quote }}
 # EMQX
 - name: EMQX_USERNAME
   value: {{ .Values.global.environments.emqx.username | quote }}

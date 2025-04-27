@@ -86,6 +86,7 @@ global:
     kafka:
       host: "wenex-kafka-bootstrap.kafka.svc.cluster.local"
       port: 9092
+      noPartitionerWarning: 1
 
     # EMQX
     emqx:
