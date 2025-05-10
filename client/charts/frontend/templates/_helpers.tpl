@@ -95,6 +95,8 @@ Create the environments variable
 # *****************************
 # Logging Services
 # *****************************
+- name: SENTRY_URL
+  value: {{ .Values.environments.nuxt.public.sentry.url | quote }}
 - name: SENTRY_AUTH_TOKEN
   value: {{ .Values.environments.nuxt.public.sentry.authToken | quote }}
 - name: NUXT_PUBLIC_SENTRY_DSN
