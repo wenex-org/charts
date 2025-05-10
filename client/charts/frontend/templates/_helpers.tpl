@@ -100,7 +100,7 @@ Create the environments variable
 - name: NUXT_PUBLIC_SENTRY_DSN
   value: {{ .Values.environments.nuxt.public.sentry.dsn | quote }}
 - name: NUXT_PUBLIC_SENTRY_TRACES_SAMPLE_RATE
-  value: {{ .Values.environments.nuxt.public.sentry.tracesSampleRate | "0.1" | quote }}
+  value: {{ .Values.environments.nuxt.public.sentry.tracesSampleRate | default "0.1" | quote }}
 {{- if .Values.environments.nuxt.public.google }}
 # *****************************
 # OAuth Information
