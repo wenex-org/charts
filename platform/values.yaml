@@ -78,6 +78,13 @@ global:
       pass: "5outyK4QIGPBE6pX2G"
       query: "replicaSet=rs0&authSource=admin"
 
+    # ElasticSearch
+    elasticsearch:
+      node: "https://elk-cluster-es-http.elastic-system.svc.cluster.local:9200"
+      # apiKey: ""
+      username: ""
+      password: ""
+
     # **********************
     # Broker Services
     # **********************

@@ -180,6 +180,15 @@ Create the environments variable
   value: {{ .Values.global.environments.mongo.pass | quote }}
 - name: MONGO_QUERY
   value: {{ .Values.global.environments.mongo.query | default "replicaSet=rs0&authSource=admin" | quote }}
+# Elasticsearch
+- name: ELASTICSEARCH_NODE
+  value: {{ .Values.global.environments.elasticsearch.node | default "https://elk-cluster-es-http.elastic-system.svc.cluster.local:9200" | quote }}
+- name: ELASTICSEARCH_API_KEY
+  value: {{ .Values.global.environments.elasticsearch.apiKey | quote }}
+- name: ELASTICSEARCH_USERNAME
+  value: {{ .Values.global.environments.elasticsearch.username | quote }}
+- name: ELASTICSEARCH_PASSWORD
+  value: {{ .Values.global.environments.elasticsearch.password | quote }}
 # **********************
 # Broker Services
 # **********************

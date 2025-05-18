@@ -3,7 +3,7 @@ entries:
   client:
   - apiVersion: v2
     appVersion: 1.0.8
-    created: "2025-05-10T13:42:46.943123305+03:30"
+    created: "2025-05-18T17:31:31.568304844+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -22,7 +22,7 @@ entries:
       repository: file://charts/frontend
       version: 1.0.5
     description: A Helm chart for Kubernetes
-    digest: c2f045c9e5a2dd00c2ec15cd5d992ca8b346e06e4119fb2f078f0f2607eab85c
+    digest: 5bd8e9d0597d87b075be3f10a5bd0f4c5f7eb35be227057e23f4c59e6f041c93
     icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
     name: client
     type: application
@@ -31,7 +31,7 @@ entries:
     version: 1.0.8
   - apiVersion: v2
     appVersion: 1.0.7
-    created: "2025-05-10T13:42:46.942184757+03:30"
+    created: "2025-05-18T17:31:31.56743963+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -59,7 +59,7 @@ entries:
     version: 1.0.7
   - apiVersion: v2
     appVersion: 1.0.6
-    created: "2025-05-10T13:42:46.941281159+03:30"
+    created: "2025-05-18T17:31:31.566451292+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -87,7 +87,7 @@ entries:
     version: 1.0.6
   - apiVersion: v2
     appVersion: 1.0.5
-    created: "2025-05-10T13:42:46.940334763+03:30"
+    created: "2025-05-18T17:31:31.564952038+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -115,7 +115,7 @@ entries:
     version: 1.0.5
   - apiVersion: v2
     appVersion: 1.0.4
-    created: "2025-05-10T13:42:46.938846912+03:30"
+    created: "2025-05-18T17:31:31.563948328+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -143,7 +143,7 @@ entries:
     version: 1.0.4
   - apiVersion: v2
     appVersion: 1.0.3
-    created: "2025-05-10T13:42:46.937538891+03:30"
+    created: "2025-05-18T17:31:31.562910628+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -171,7 +171,7 @@ entries:
     version: 1.0.3
   - apiVersion: v2
     appVersion: 1.0.2
-    created: "2025-05-10T13:42:46.936320945+03:30"
+    created: "2025-05-18T17:31:31.561849515+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -199,7 +199,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-05-10T13:42:46.93505492+03:30"
+    created: "2025-05-18T17:31:31.560824943+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -227,7 +227,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-05-10T13:42:46.93375029+03:30"
+    created: "2025-05-18T17:31:31.559921116+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -255,8 +255,72 @@ entries:
     version: 1.0.0
   platform:
   - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2025-05-18T17:31:31.572174763+03:30"
+    dependencies:
+    - condition: auth.enabled
+      name: auth
+      repository: file://charts/auth
+      version: 1.0.0
+    - condition: domain.enabled
+      name: domain
+      repository: file://charts/domain
+      version: 1.0.0
+    - condition: context.enabled
+      name: context
+      repository: file://charts/context
+      version: 1.0.0
+    - condition: essential.enabled
+      name: essential
+      repository: file://charts/essential
+      version: 1.0.0
+    - condition: financial.enabled
+      name: financial
+      repository: file://charts/financial
+      version: 1.0.0
+    - condition: general.enabled
+      name: general
+      repository: file://charts/general
+      version: 1.0.0
+    - condition: identity.enabled
+      name: identity
+      repository: file://charts/identity
+      version: 1.0.0
+    - condition: special.enabled
+      name: special
+      repository: file://charts/special
+      version: 1.0.0
+    - condition: touch.enabled
+      name: touch
+      repository: file://charts/touch
+      version: 1.0.0
+    - condition: watcher.enabled
+      name: watcher
+      repository: file://charts/watcher
+      version: 1.0.0
+    - condition: observer.enabled
+      name: observer
+      repository: file://charts/observer
+      version: 1.0.0
+    - condition: preserver.enabled
+      name: preserver
+      repository: file://charts/preserver
+      version: 1.0.0
+    - condition: dispatcher.enabled
+      name: dispatcher
+      repository: file://charts/dispatcher
+      version: 1.0.0
+    description: A Helm chart for Kubernetes
+    digest: 42575f1d9f53cbe05fdebf433e8b005154308809a388c5e6de05f952d819bdaa
+    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
+    name: platform
+    type: application
+    urls:
+    - platform-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-05-10T13:42:46.944859634+03:30"
+    created: "2025-05-18T17:31:31.570187586+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -318,4 +382,4 @@ entries:
     urls:
     - platform-1.0.0.tgz
     version: 1.0.0
-generated: "2025-05-10T13:42:46.932020691+03:30"
+generated: "2025-05-18T17:31:31.558570102+03:30"
