@@ -181,6 +181,8 @@ Create the environments variable
 - name: MONGO_QUERY
   value: {{ .Values.global.environments.mongo.query | default "replicaSet=rs0&authSource=admin" | quote }}
 # Elasticsearch
+- name: ELASTIC_PREFIX
+  value: {{ .Values.global.environments.elasticsearch.prefix | default "wnx" | quote }}
 - name: ELASTICSEARCH_NODE
   value: {{ .Values.global.environments.elasticsearch.node | default "https://elk-cluster-es-http.elastic-system.svc.cluster.local:9200" | quote }}
 - name: ELASTICSEARCH_API_KEY

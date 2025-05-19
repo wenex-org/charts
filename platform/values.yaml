@@ -80,6 +80,7 @@ global:
 
     # ElasticSearch
     elasticsearch:
+      prefix: "wnx"
       node: "https://elk-cluster-es-http.elastic-system.svc.cluster.local:9200"
       # apiKey: ""
       username: ""
@@ -135,6 +136,8 @@ global:
       host: platform-special.wenex-platform.svc.cluster.local
     touch:
       host: platform-touch.wenex-platform.svc.cluster.local
+    content:
+      host: platform-content.wenex-platform.svc.cluster.local
 
     watcher:
       host: platform-watcher.wenex-platform.svc.cluster.local
@@ -162,6 +165,8 @@ identity:
 special:
   enabled: false
 touch:
+  enabled: false
+content:
   enabled: false
 
 watcher:

@@ -1,0 +1,25 @@
+enabled: false
+
+replicaCount: 2
+
+fullnameOverride: "platform-content"
+
+serviceAccount:
+  create: true
+  automount: true
+
+service:
+  type: ClusterIP
+  ports:
+    - port: 80
+      protocol: TCP
+      name: http
+    - port: 8080
+      protocol: TCP
+      name: grpc
+
+ingress:
+  enabled: false
+
+autoscaling:
+  enabled: false
