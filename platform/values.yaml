@@ -49,7 +49,10 @@ global:
     # **********************
 
     # Sentry
-    sentry: {}
+    sentry:
+      dsn: ""
+      maxBreadcrumbs: "10"
+      tracesSampleRate: "1.0"
 
     # **********************
     # Storage Services
@@ -104,18 +107,31 @@ global:
       baseUrl: "http://emqx-dashboard.emqx-operator-system.svc.cluster.local:18083/api/v5"
 
     # **********************
+    # OpenStreetMap
+    # **********************
+
+    # Nominatim
+    nominatim:
+      apiBaseUrl: "http://mediagis-nominatim.openstreetmap.svc.cluster.local"
+
+    # **********************
     # Telemetry Services
     # **********************
 
     # OpenTelemetry
-    otlp: {}
+    otlp:
+      port: ""
+      host: ""
 
     # **********************
     # APM Service
     # **********************
 
     # Elastic APM
-    apm: {}
+    apm:
+      serverUrl: ""
+      secretToken: ""
+      verifyServerCert: ""
 
   configuration:
     auth:
@@ -138,6 +154,8 @@ global:
       host: platform-touch.wenex-platform.svc.cluster.local
     content:
       host: platform-content.wenex-platform.svc.cluster.local
+    logistic:
+      host: platform-logistic.wenex-platform.svc.cluster.local
 
     watcher:
       host: platform-watcher.wenex-platform.svc.cluster.local
@@ -167,6 +185,8 @@ special:
 touch:
   enabled: false
 content:
+  enabled: false
+logistic:
   enabled: false
 
 watcher:

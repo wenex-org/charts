@@ -211,6 +211,12 @@ Create the environments variable
 - name: EMQX_BASE_URL
   value: {{ .Values.global.environments.emqx.baseUrl | default "http://emqx-dashboard.emqx-operator-system.svc.cluster.local:18083/api/v5" | quote }}
 # **********************
+# OpenStreetMap
+# **********************
+# Nominatim
+- name: NOMINATIM_API_BASE_URL
+  value: {{ .Values.global.environments.nominatim.apiBaseUrl | default "http://mediagis-nominatim.openstreetmap.svc.cluster.local" | quote }}
+# **********************
 # Telemetry Services
 # **********************
 # OpenTelemetry
