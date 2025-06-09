@@ -143,9 +143,9 @@ Create the environments variable
 - name: SENTRY_DSN
   value: {{ .Values.global.environments.sentry.dsn | quote }}
 - name: SENTRY_MAX_BREADCRUMBS
-  value: {{ .Values.global.environments.sentry.maxBreadcrumbs | default "10" | quote }}
+  value: {{ .Values.global.environments.sentry.maxBreadcrumbs | default "100" | quote }}
 - name: SENTRY_TRACES_SAMPLE_RATE
-  value: {{ .Values.global.environments.sentry.tracesSampleRate | default "1.0" | quote }}
+  value: {{ .Values.global.environments.sentry.tracesSampleRate | default "0.8" | quote }}
 # **********************
 # Storage Services
 # **********************
@@ -184,7 +184,7 @@ Create the environments variable
 - name: ELASTIC_PREFIX
   value: {{ .Values.global.environments.elasticsearch.prefix | default "wnx" | quote }}
 - name: ELASTICSEARCH_NODE
-  value: {{ .Values.global.environments.elasticsearch.node | default "https://elk-cluster-es-http.elastic-system.svc.cluster.local:9200" | quote }}
+  value: {{ .Values.global.environments.elasticsearch.node | quote }}
 - name: ELASTICSEARCH_API_KEY
   value: {{ .Values.global.environments.elasticsearch.apiKey | quote }}
 - name: ELASTICSEARCH_USERNAME
@@ -203,19 +203,19 @@ Create the environments variable
   value: {{ .Values.global.environments.kafka.noPartitionerWarning | default "1" | quote }}
 # EMQX
 - name: EMQX_USERNAME
-  value: {{ .Values.global.environments.emqx.username | quote }}
+  value: {{ .Values.global.environments.emqx.username | default "admin" | quote }}
 - name: EMQX_PASSWORD
   value: {{ .Values.global.environments.emqx.password | quote }}
 - name: EMQX_EXHOOK_URL
-  value: {{ .Values.global.environments.emqx.exhookUrl | default "http://platform-preserver.wenex-platform.svc.cluster.local:8080" | quote }}
+  value: {{ .Values.global.environments.emqx.exhookUrl | quote }}
 - name: EMQX_BASE_URL
-  value: {{ .Values.global.environments.emqx.baseUrl | default "http://emqx-dashboard.emqx-operator-system.svc.cluster.local:18083/api/v5" | quote }}
+  value: {{ .Values.global.environments.emqx.baseUrl | quote }}
 # **********************
 # OpenStreetMap
 # **********************
 # Nominatim
 - name: NOMINATIM_API_BASE_URL
-  value: {{ .Values.global.environments.nominatim.apiBaseUrl | default "http://mediagis-nominatim.openstreetmap.svc.cluster.local" | quote }}
+  value: {{ .Values.global.environments.nominatim.apiBaseUrl | quote }}
 # **********************
 # Telemetry Services
 # **********************
@@ -223,15 +223,15 @@ Create the environments variable
 - name: OTLP_PORT
   value: {{ .Values.global.environments.otlp.port | default "4318" | quote }}
 - name: OTLP_HOST
-  value: {{ .Values.global.environments.otlp.host | default "localhost" | quote }}
+  value: {{ .Values.global.environments.otlp.host | quote }}
 # **********************
 # APM Service
 # **********************
 # Elastic APM
 - name: ELASTIC_APM_SERVER_URL
-  value: {{ .Values.global.environments.apm.serverUrl | default "https://localhost:8200" | quote }}
+  value: {{ .Values.global.environments.apm.serverUrl | quote }}
 - name: ELASTIC_APM_SECRET_TOKEN
-  value: {{ .Values.global.environments.apm.secretToken | default "secrettokengoeshere" | quote }}
+  value: {{ .Values.global.environments.apm.secretToken | quote }}
 - name: ELASTIC_APM_VERIFY_SERVER_CERT
   value: {{ .Values.global.environments.apm.verifyServerCert | default "false" | quote }}
 {{- end }}

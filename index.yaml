@@ -1,525 +1,76 @@
 apiVersion: v1
 entries:
-  client:
-  - apiVersion: v2
-    appVersion: 1.0.8
-    created: "2025-05-28T14:58:25.707718029+03:30"
-    dependencies:
-    - condition: services.enabled
-      name: services
-      repository: file://charts/services
-      version: 1.0.3
-    - condition: workers.enabled
-      name: workers
-      repository: file://charts/workers
-      version: 1.0.3
-    - condition: assets.enabled
-      name: assets
-      repository: file://charts/assets
-      version: 1.0.0
-    - condition: frontend.enabled
-      name: frontend
-      repository: file://charts/frontend
-      version: 1.0.5
-    description: A Helm chart for Kubernetes
-    digest: ab1a286ff36102773b66efed7aa9cfc042652dce06b0b62664e5acfa13037b2d
-    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
-    name: client
-    type: application
-    urls:
-    - client-1.0.8.tgz
-    version: 1.0.8
-  - apiVersion: v2
-    appVersion: 1.0.7
-    created: "2025-05-28T14:58:25.706928261+03:30"
-    dependencies:
-    - condition: services.enabled
-      name: services
-      repository: file://charts/services
-      version: 1.0.3
-    - condition: workers.enabled
-      name: workers
-      repository: file://charts/workers
-      version: 1.0.3
-    - condition: assets.enabled
-      name: assets
-      repository: file://charts/assets
-      version: 1.0.0
-    - condition: frontend.enabled
-      name: frontend
-      repository: file://charts/frontend
-      version: 1.0.4
-    description: A Helm chart for Kubernetes
-    digest: 086bdc4af04be2aec42d5a7a7cff7cbac9bda2c9ce51b11d73eb8f7147a04d3f
-    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
-    name: client
-    type: application
-    urls:
-    - client-1.0.7.tgz
-    version: 1.0.7
-  - apiVersion: v2
-    appVersion: 1.0.6
-    created: "2025-05-28T14:58:25.705992964+03:30"
-    dependencies:
-    - condition: services.enabled
-      name: services
-      repository: file://charts/services
-      version: 1.0.3
-    - condition: workers.enabled
-      name: workers
-      repository: file://charts/workers
-      version: 1.0.3
-    - condition: assets.enabled
-      name: assets
-      repository: file://charts/assets
-      version: 1.0.0
-    - condition: frontend.enabled
-      name: frontend
-      repository: file://charts/frontend
-      version: 1.0.3
-    description: A Helm chart for Kubernetes
-    digest: 5f967b419ae72e6f071b94c87b5ab178aa4d28e482f53bc7f457d1681f49ff4c
-    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
-    name: client
-    type: application
-    urls:
-    - client-1.0.6.tgz
-    version: 1.0.6
-  - apiVersion: v2
-    appVersion: 1.0.5
-    created: "2025-05-28T14:58:25.704989456+03:30"
-    dependencies:
-    - condition: services.enabled
-      name: services
-      repository: file://charts/services
-      version: 1.0.3
-    - condition: workers.enabled
-      name: workers
-      repository: file://charts/workers
-      version: 1.0.3
-    - condition: assets.enabled
-      name: assets
-      repository: file://charts/assets
-      version: 1.0.0
-    - condition: frontend.enabled
-      name: frontend
-      repository: file://charts/frontend
-      version: 1.0.2
-    description: A Helm chart for Kubernetes
-    digest: 40e7591ae65cc520e9a15936526603b4082020f9bd0c79a3da6a2ffd07c9ca1d
-    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
-    name: client
-    type: application
-    urls:
-    - client-1.0.5.tgz
-    version: 1.0.5
-  - apiVersion: v2
-    appVersion: 1.0.4
-    created: "2025-05-28T14:58:25.703562662+03:30"
-    dependencies:
-    - condition: services.enabled
-      name: services
-      repository: file://charts/services
-      version: 1.0.2
-    - condition: workers.enabled
-      name: workers
-      repository: file://charts/workers
-      version: 1.0.2
-    - condition: assets.enabled
-      name: assets
-      repository: file://charts/assets
-      version: 1.0.0
-    - condition: frontend.enabled
-      name: frontend
-      repository: file://charts/frontend
-      version: 1.0.2
-    description: A Helm chart for Kubernetes
-    digest: 5e82a4c5330976dcef96a7106b458a715c131e00747881880752eba885392bb6
-    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
-    name: client
-    type: application
-    urls:
-    - client-1.0.4.tgz
-    version: 1.0.4
-  - apiVersion: v2
-    appVersion: 1.0.3
-    created: "2025-05-28T14:58:25.70260545+03:30"
-    dependencies:
-    - condition: services.enabled
-      name: services
-      repository: file://charts/services
-      version: 1.0.1
-    - condition: workers.enabled
-      name: workers
-      repository: file://charts/workers
-      version: 1.0.1
-    - condition: assets.enabled
-      name: assets
-      repository: file://charts/assets
-      version: 1.0.0
-    - condition: frontend.enabled
-      name: frontend
-      repository: file://charts/frontend
-      version: 1.0.2
-    description: A Helm chart for Kubernetes
-    digest: 0c18a1d1871af5024a9e5aea42006b735aa81bb029812fc43a2c12886f87b746
-    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
-    name: client
-    type: application
-    urls:
-    - client-1.0.3.tgz
-    version: 1.0.3
-  - apiVersion: v2
-    appVersion: 1.0.2
-    created: "2025-05-28T14:58:25.701588027+03:30"
-    dependencies:
-    - condition: services.enabled
-      name: services
-      repository: file://charts/services
-      version: 1.0.0
-    - condition: workers.enabled
-      name: workers
-      repository: file://charts/workers
-      version: 1.0.0
-    - condition: assets.enabled
-      name: assets
-      repository: file://charts/assets
-      version: 1.0.0
-    - condition: frontend.enabled
-      name: frontend
-      repository: file://charts/frontend
-      version: 1.0.2
-    description: A Helm chart for Kubernetes
-    digest: 9aab2ee2d0e94e661fce6efb823f5a786a53bc3cd30bc125f2e9e83a62cffae9
-    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
-    name: client
-    type: application
-    urls:
-    - client-1.0.2.tgz
-    version: 1.0.2
-  - apiVersion: v2
-    appVersion: 1.0.1
-    created: "2025-05-28T14:58:25.700643031+03:30"
-    dependencies:
-    - condition: services.enabled
-      name: services
-      repository: file://charts/services
-      version: 1.0.0
-    - condition: workers.enabled
-      name: workers
-      repository: file://charts/workers
-      version: 1.0.0
-    - condition: assets.enabled
-      name: assets
-      repository: file://charts/assets
-      version: 1.0.0
-    - condition: frontend.enabled
-      name: frontend
-      repository: file://charts/frontend
-      version: 1.0.1
-    description: A Helm chart for Kubernetes
-    digest: 3b0ccce7a917cd9108a85ebefd014ed6f2ed641c270b80cd65ea46e4567da69c
-    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
-    name: client
-    type: application
-    urls:
-    - client-1.0.1.tgz
-    version: 1.0.1
-  - apiVersion: v2
-    appVersion: 1.0.0
-    created: "2025-05-28T14:58:25.69974405+03:30"
-    dependencies:
-    - condition: services.enabled
-      name: services
-      repository: file://charts/services
-      version: 1.0.0
-    - condition: workers.enabled
-      name: workers
-      repository: file://charts/workers
-      version: 1.0.0
-    - condition: assets.enabled
-      name: assets
-      repository: file://charts/assets
-      version: 1.0.0
-    - condition: frontend.enabled
-      name: frontend
-      repository: file://charts/frontend
-      version: 1.0.0
-    description: A Helm chart for Kubernetes
-    digest: 35fd22b4fb52dde2889ac199919fb64d2b6e7c998bfca9af7139d2c08fc65fb8
-    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
-    name: client
-    type: application
-    urls:
-    - client-1.0.0.tgz
-    version: 1.0.0
   platform:
   - apiVersion: v2
-    appVersion: 1.0.3
-    created: "2025-05-28T14:58:25.716054956+03:30"
+    appVersion: 1.1.0
+    created: "2025-06-09T16:38:20.363340052+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
       repository: file://charts/auth
-      version: 1.0.0
+      version: 1.1.0
     - condition: domain.enabled
       name: domain
       repository: file://charts/domain
-      version: 1.0.0
+      version: 1.1.0
     - condition: context.enabled
       name: context
       repository: file://charts/context
-      version: 1.0.0
+      version: 1.1.0
     - condition: essential.enabled
       name: essential
       repository: file://charts/essential
-      version: 1.0.0
+      version: 1.1.0
     - condition: financial.enabled
       name: financial
       repository: file://charts/financial
-      version: 1.0.0
+      version: 1.1.0
     - condition: general.enabled
       name: general
       repository: file://charts/general
-      version: 1.0.0
+      version: 1.1.0
     - condition: identity.enabled
       name: identity
       repository: file://charts/identity
-      version: 1.0.0
+      version: 1.1.0
     - condition: special.enabled
       name: special
       repository: file://charts/special
-      version: 1.0.0
+      version: 1.1.0
     - condition: touch.enabled
       name: touch
       repository: file://charts/touch
-      version: 1.0.0
+      version: 1.1.0
     - condition: content.enabled
       name: content
       repository: file://charts/content
-      version: 1.0.0
+      version: 1.1.0
     - condition: logistic.enabled
       name: logistic
       repository: file://charts/logistic
-      version: 1.0.0
+      version: 1.1.0
     - condition: watcher.enabled
       name: watcher
       repository: file://charts/watcher
-      version: 1.0.0
+      version: 1.1.0
     - condition: observer.enabled
       name: observer
       repository: file://charts/observer
-      version: 1.0.0
+      version: 1.1.0
     - condition: preserver.enabled
       name: preserver
       repository: file://charts/preserver
-      version: 1.0.0
+      version: 1.1.0
     - condition: dispatcher.enabled
       name: dispatcher
       repository: file://charts/dispatcher
-      version: 1.0.0
+      version: 1.1.0
     description: A Helm chart for Kubernetes
-    digest: 8ad221239bf6fec6fd8cf7d53af9295ff6b17d37fc708b11f10f762570df000e
+    digest: 5f71f34732cafb23c40273fdef51b55c8471344c78405c6ce76c6bec59ba3409
     icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
     name: platform
     type: application
     urls:
-    - platform-1.0.3.tgz
-    version: 1.0.3
-  - apiVersion: v2
-    appVersion: 1.0.2
-    created: "2025-05-28T14:58:25.713698576+03:30"
-    dependencies:
-    - condition: auth.enabled
-      name: auth
-      repository: file://charts/auth
-      version: 1.0.0
-    - condition: domain.enabled
-      name: domain
-      repository: file://charts/domain
-      version: 1.0.0
-    - condition: context.enabled
-      name: context
-      repository: file://charts/context
-      version: 1.0.0
-    - condition: essential.enabled
-      name: essential
-      repository: file://charts/essential
-      version: 1.0.0
-    - condition: financial.enabled
-      name: financial
-      repository: file://charts/financial
-      version: 1.0.0
-    - condition: general.enabled
-      name: general
-      repository: file://charts/general
-      version: 1.0.0
-    - condition: identity.enabled
-      name: identity
-      repository: file://charts/identity
-      version: 1.0.0
-    - condition: special.enabled
-      name: special
-      repository: file://charts/special
-      version: 1.0.0
-    - condition: touch.enabled
-      name: touch
-      repository: file://charts/touch
-      version: 1.0.0
-    - condition: content.enabled
-      name: content
-      repository: file://charts/content
-      version: 1.0.0
-    - condition: watcher.enabled
-      name: watcher
-      repository: file://charts/watcher
-      version: 1.0.0
-    - condition: observer.enabled
-      name: observer
-      repository: file://charts/observer
-      version: 1.0.0
-    - condition: preserver.enabled
-      name: preserver
-      repository: file://charts/preserver
-      version: 1.0.0
-    - condition: dispatcher.enabled
-      name: dispatcher
-      repository: file://charts/dispatcher
-      version: 1.0.0
-    description: A Helm chart for Kubernetes
-    digest: 058ee324fa1b6c47d72ecd8998b5a09a46252f224b0944f80e0d2b70ce8fb506
-    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
-    name: platform
-    type: application
-    urls:
-    - platform-1.0.2.tgz
-    version: 1.0.2
-  - apiVersion: v2
-    appVersion: 1.0.1
-    created: "2025-05-28T14:58:25.711801225+03:30"
-    dependencies:
-    - condition: auth.enabled
-      name: auth
-      repository: file://charts/auth
-      version: 1.0.0
-    - condition: domain.enabled
-      name: domain
-      repository: file://charts/domain
-      version: 1.0.0
-    - condition: context.enabled
-      name: context
-      repository: file://charts/context
-      version: 1.0.0
-    - condition: essential.enabled
-      name: essential
-      repository: file://charts/essential
-      version: 1.0.0
-    - condition: financial.enabled
-      name: financial
-      repository: file://charts/financial
-      version: 1.0.0
-    - condition: general.enabled
-      name: general
-      repository: file://charts/general
-      version: 1.0.0
-    - condition: identity.enabled
-      name: identity
-      repository: file://charts/identity
-      version: 1.0.0
-    - condition: special.enabled
-      name: special
-      repository: file://charts/special
-      version: 1.0.0
-    - condition: touch.enabled
-      name: touch
-      repository: file://charts/touch
-      version: 1.0.0
-    - condition: watcher.enabled
-      name: watcher
-      repository: file://charts/watcher
-      version: 1.0.0
-    - condition: observer.enabled
-      name: observer
-      repository: file://charts/observer
-      version: 1.0.0
-    - condition: preserver.enabled
-      name: preserver
-      repository: file://charts/preserver
-      version: 1.0.0
-    - condition: dispatcher.enabled
-      name: dispatcher
-      repository: file://charts/dispatcher
-      version: 1.0.0
-    description: A Helm chart for Kubernetes
-    digest: 42575f1d9f53cbe05fdebf433e8b005154308809a388c5e6de05f952d819bdaa
-    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
-    name: platform
-    type: application
-    urls:
-    - platform-1.0.1.tgz
-    version: 1.0.1
-  - apiVersion: v2
-    appVersion: 1.0.0
-    created: "2025-05-28T14:58:25.709547705+03:30"
-    dependencies:
-    - condition: auth.enabled
-      name: auth
-      repository: file://charts/auth
-      version: 1.0.0
-    - condition: domain.enabled
-      name: domain
-      repository: file://charts/domain
-      version: 1.0.0
-    - condition: context.enabled
-      name: context
-      repository: file://charts/context
-      version: 1.0.0
-    - condition: essential.enabled
-      name: essential
-      repository: file://charts/essential
-      version: 1.0.0
-    - condition: financial.enabled
-      name: financial
-      repository: file://charts/financial
-      version: 1.0.0
-    - condition: general.enabled
-      name: general
-      repository: file://charts/general
-      version: 1.0.0
-    - condition: identity.enabled
-      name: identity
-      repository: file://charts/identity
-      version: 1.0.0
-    - condition: special.enabled
-      name: special
-      repository: file://charts/special
-      version: 1.0.0
-    - condition: touch.enabled
-      name: touch
-      repository: file://charts/touch
-      version: 1.0.0
-    - condition: watcher.enabled
-      name: watcher
-      repository: file://charts/watcher
-      version: 1.0.0
-    - condition: observer.enabled
-      name: observer
-      repository: file://charts/observer
-      version: 1.0.0
-    - condition: preserver.enabled
-      name: preserver
-      repository: file://charts/preserver
-      version: 1.0.0
-    - condition: dispatcher.enabled
-      name: dispatcher
-      repository: file://charts/dispatcher
-      version: 1.0.0
-    description: A Helm chart for Kubernetes
-    digest: 4a12a944c34f8270ef0eee51a0a4f90b66304d7c753222b2ba77d4e5059cb8e9
-    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
-    name: platform
-    type: application
-    urls:
-    - platform-1.0.0.tgz
-    version: 1.0.0
-generated: "2025-05-28T14:58:25.69854457+03:30"
+    - platform-1.1.0.tgz
+    version: 1.1.0
+generated: "2025-06-09T16:38:20.361232217+03:30"

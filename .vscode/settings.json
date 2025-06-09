@@ -13,6 +13,7 @@
     "Nominatim",
     "NUXT",
     "Partitioner",
+    "psmdb",
     "RECAPTCHA",
     "tolerations",
     "trunc",
