@@ -110,7 +110,7 @@ global:
     # OpenTelemetry
     otlp:
       port: "4318"
-      host: ""
+      host: "jaeger-instance-collector.opentelemetry.svc.cluster.local"
     # **********************
     # APM Service
     # **********************
