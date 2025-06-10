@@ -79,7 +79,7 @@ global:
     # ElasticSearch
     elasticsearch:
       prefix: "wnx"
-      node: "http://elk-cluster-es-http.elastic-system.svc.cluster.local:9200"
+      node: "https://elk-cluster-es-http.elastic-system.svc.cluster.local:9200"
       # If using API Key, uncomment the below line and comment out the username/password lines
       # apiKey: ""
       username: "elastic"
