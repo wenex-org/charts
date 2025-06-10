@@ -119,7 +119,7 @@ global:
       serverUrl: ""
       secretToken: ""
       verifyServerCert: "false"
-  ###**********************
+  # **********************
   # Platform Configuration
   # **********************
   configuration:

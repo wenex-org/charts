@@ -5,7 +5,7 @@ replicaCount: 2
 image:
   repository: vhidvz/client-frontend
   pullPolicy: IfNotPresent
-  tag: "latest"
+  tag: "1.1.0"
 
 fullnameOverride: "client-frontend"
 
@@ -26,45 +26,42 @@ autoscaling:
 
 environments:
   nuxt:
+    # *****************************
+    # Logging Services
+    # *****************************
+    sentry:
+      url: ""
+      authToken: ""
     public:
-      apiBaseUrl: "http://client-gateway.wenex-client.svc.cluster.local"
-
+      apiBaseUrl: "https://gateway.wenex.org/"
       # *****************************
       # Push Information
       # *****************************
-
-      vapidPublicKey: "BI6g0d-QKlNp2wWlCsUS8K49Y82Pc302yw5tcjhhMGaGoJsnjfz9uFp1dYjniJZCb62hdmqY32wcge9ieJI9GHw"
-
-      # *****************************
-      # Client Information
-      # *****************************
-
-      appId: "6448d41b95359de4ea2fb0fd"
-      clientId: "6448d422740b44bbae58c7f2"
-
-      # MQTT Over WebSocket
-      mqttWsUrl: "ws://localhost:8083/mqtt"
-
-      # *****************************
-      # Logging Services
-      # *****************************
-
-      sentry:
-        dsn: ""
-        auth: ""
-
+      vapidPublicKey: ""
       # *****************************
       # Security Services
       # *****************************
       altcha:
-        challengeUrl: "http://client-gateway.wenex-client.svc.cluster.local/challenge"
-
+        challengeUrl: "https://gateway.wenex.org/challenge"
+      # *****************************
+      # Client Information
+      # *****************************
+      appId: ""
+      clientId: ""
+      # MQTT Over WebSocket
+      mqttWsUrl: "ws://emqx.wenex.org/mqtt"
+      # *****************************
+      # Logging Services
+      # *****************************
+      sentry:
+        dsn: ""
+        tracesSampleRate: "0.8"
       # *****************************
       # OAuth Information
       # *****************************
+      # Google
       google:
-        # Google
         client:
-          id: "932594562282-gieefbqm3csgj5k1850uivbbhavfj0ta.apps.googleusercontent.com"
+          id: ""
           scope: "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"
-          redirectUri: "http://frontend.w3x.app/oauth"
+          redirectUri: "https://platform.wenex.org/oauth"

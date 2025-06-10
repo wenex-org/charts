@@ -223,7 +223,7 @@ Create the environments variable
 - name: OTLP_PORT
   value: {{ .Values.global.environments.otlp.port | default "4318" | quote }}
 - name: OTLP_HOST
-  value: {{ .Values.global.environments.otlp.host | quote }}
+  value: {{ .Values.global.environments.otlp.host | default "jaeger-instance-collector.opentelemetry.svc.cluster.local" | quote }}
 # **********************
 # APM Service
 # **********************

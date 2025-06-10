@@ -71,38 +71,38 @@ Create the environments variable
   value: {{ .Values.image.tag | quote }}
 # *****************************
 - name: NUXT_PUBLIC_API_BASE_URL
-  value: {{ .Values.environments.nuxt.public.apiBaseUrl | default "http://client-gateway.wenex-client.svc.cluster.local" | quote }}
+  value: {{ .Values.environments.nuxt.public.apiBaseUrl | quote }}
 # *****************************
 # Push Information
 # *****************************
 - name: NUXT_PUBLIC_VAPID_PUBLIC_KEY
-  value: {{ .Values.environments.nuxt.public.vapidPublicKey | default "BI6g0d-QKlNp2wWlCsUS8K49Y82Pc302yw5tcjhhMGaGoJsnjfz9uFp1dYjniJZCb62hdmqY32wcge9ieJI9GHw" | quote }}
+  value: {{ .Values.environments.nuxt.public.vapidPublicKey | quote }}
 # *****************************
 # Security Services
 # *****************************
 - name: NUXT_PUBLIC_ALTCHA_CHALLENGE_URL
-  value: {{ .Values.environments.nuxt.public.altcha.challengeUrl | default "http://client-gateway.wenex-client.svc.cluster.local/challenge" | quote }}
+  value: {{ .Values.environments.nuxt.public.altcha.challengeUrl | default "https://gateway.wenex.org/challenge" | quote }}
 # *****************************
 # Client Information
 # *****************************
 - name: NUXT_PUBLIC_APP_ID
-  value: {{ .Values.environments.nuxt.public.appId | default "6448d41b95359de4ea2fb0fd" | quote }}
+  value: {{ .Values.environments.nuxt.public.appId | quote }}
 - name: NUXT_PUBLIC_CLIENT_ID
-  value: {{ .Values.environments.nuxt.public.clientId | default "6448d422740b44bbae58c7f2" | quote }}
+  value: {{ .Values.environments.nuxt.public.clientId | quote }}
 # MQTT Over WebSocket
 - name: NUXT_PUBLIC_MQTT_WS_URL
-  value: {{ .Values.environments.nuxt.public.mqttWsUrl | default "ws://localhost:8083/mqtt" | quote }}
+  value: {{ .Values.environments.nuxt.public.mqttWsUrl | default "ws://emqx.wenex.org/mqtt" | quote }}
 # *****************************
 # Logging Services
 # *****************************
 - name: SENTRY_URL
-  value: {{ .Values.environments.nuxt.public.sentry.url | quote }}
+  value: {{ .Values.environments.nuxt.sentry.url | quote }}
 - name: SENTRY_AUTH_TOKEN
-  value: {{ .Values.environments.nuxt.public.sentry.authToken | quote }}
+  value: {{ .Values.environments.nuxt.sentry.authToken | quote }}
 - name: NUXT_PUBLIC_SENTRY_DSN
   value: {{ .Values.environments.nuxt.public.sentry.dsn | quote }}
 - name: NUXT_PUBLIC_SENTRY_TRACES_SAMPLE_RATE
-  value: {{ .Values.environments.nuxt.public.sentry.tracesSampleRate | default "0.1" | quote }}
+  value: {{ .Values.environments.nuxt.public.sentry.tracesSampleRate | default "0.8" | quote }}
 {{- if .Values.environments.nuxt.public.google }}
 # *****************************
 # OAuth Information
@@ -111,8 +111,8 @@ Create the environments variable
 - name: NUXT_PUBLIC_GOOGLE_SCOPE
   value: {{ .Values.environments.nuxt.public.google.client.scope | default "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile" | quote }}
 - name: NUXT_PUBLIC_GOOGLE_CLIENT_ID
-  value: {{ .Values.environments.nuxt.public.google.client.id | default "932594562282-gieefbqm3csgj5k1850uivbbhavfj0ta.apps.googleusercontent.com" | quote }}
+  value: {{ .Values.environments.nuxt.public.google.client.id | quote }}
 - name: NUXT_PUBLIC_GOOGLE_REDIRECT_URI
-  value: {{ .Values.environments.nuxt.public.google.client.redirectUri | default "http://localhost:3000/oauth" | quote }}
+  value: {{ .Values.environments.nuxt.public.google.client.redirectUri | quote }}
 {{- end }}
 {{- end }}
