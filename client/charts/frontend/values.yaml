@@ -32,6 +32,9 @@ environments:
     sentry:
       url: ""
       authToken: ""
+    # *****************************
+    # Public Information
+    # *****************************
     public:
       apiBaseUrl: "https://gateway.wenex.org/"
       # *****************************
@@ -49,7 +52,7 @@ environments:
       appId: ""
       clientId: ""
       # MQTT Over WebSocket
-      mqttWsUrl: "ws://emqx.wenex.org/mqtt"
+      mqttWsUrl: "wss://emqx.wenex.org/mqtt"
       # *****************************
       # Logging Services
       # *****************************
