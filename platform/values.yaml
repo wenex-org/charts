@@ -105,6 +105,13 @@ global:
     nominatim:
       apiBaseUrl: "http://mediagis-nominatim.openstreetmap.svc.cluster.local"
     # **********************
+    # TURN/STUN Server
+    # **********************
+    # Coturn
+    coturn:
+      authSecret: ""
+      iceServers: ["turn.wenex.org"]
+    # **********************
     # Telemetry Services
     # **********************
     # OpenTelemetry
@@ -148,6 +155,8 @@ global:
       host: platform-content.wenex-platform.svc.cluster.local
     logistic:
       host: platform-logistic.wenex-platform.svc.cluster.local
+    conjoint:
+      host: platform-conjoint.wenex-platform.svc.cluster.local
     # **********************
     # Platform Workers
     # **********************
@@ -183,6 +192,8 @@ touch:
 content:
   enabled: false
 logistic:
+  enabled: false
+conjoint:
   enabled: false
 # **********************
 # Platform Workers

@@ -217,6 +217,14 @@ Create the environments variable
 - name: NOMINATIM_API_BASE_URL
   value: {{ .Values.global.environments.nominatim.apiBaseUrl | quote }}
 # **********************
+# TURN/STUN Server
+# **********************
+# Coturn
+- name: COTURN_AUTH_SECRET
+  value: {{ .Values.global.environments.coturn.authSecret | quote }}
+- name: COTURN_ICE_SERVERS
+  value: {{ .Values.global.environments.coturn.iceServers | join "," | default "turn.wenex.org" | quote }}
+# **********************
 # Telemetry Services
 # **********************
 # OpenTelemetry
