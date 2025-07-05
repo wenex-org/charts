@@ -168,6 +168,8 @@ global:
       host: platform-preserver.wenex-platform.svc.cluster.local
     dispatcher:
       host: platform-dispatcher.wenex-platform.svc.cluster.local
+    publisher:
+      host: platform-publisher.wenex-platform.svc.cluster.local
 # **********************
 # Platform Services
 # **********************
@@ -205,4 +207,6 @@ observer:
 preserver:
   enabled: false
 dispatcher:
+  enabled: false
+publisher:
   enabled: false
