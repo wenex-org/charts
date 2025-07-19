@@ -26,6 +26,10 @@ global:
   # Secrets
   # **********************
   secrets:
+    init:
+      phc:
+        rootPassword: "" # default: random 40 chars
+        clientSecret: "" # default: random 40 chars
     aes: "" # default: random 64 chars
     altcha:
       hmacKey: "" # default: random 64 chars
