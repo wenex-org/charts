@@ -94,6 +94,19 @@ Create the secrets variable
     secretKeyRef:
       name: client-secrets
       key: HMAC_KEY
+# **********************
+# Coworkers Secrets
+# **********************
+- name: INIT_PHC_ROOT_PASSWORD
+  valueFrom:
+    secretKeyRef:
+      name: client-init-secrets
+      key: INIT_PHC_ROOT_PASSWORD
+- name: INIT_PHC_CLIENT_SECRET
+  valueFrom:
+    secretKeyRef:
+      name: client-init-secrets
+      key: INIT_PHC_CLIENT_SECRET
 {{- end }}
 
 {{/*
