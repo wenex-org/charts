@@ -157,6 +157,8 @@ global:
       host: platform-logistic.wenex-platform.svc.cluster.local
     conjoint:
       host: platform-conjoint.wenex-platform.svc.cluster.local
+    career:
+      host: platform-career.wenex-platform.svc.cluster.local
     # **********************
     # Platform Workers
     # **********************
@@ -196,6 +198,8 @@ content:
 logistic:
   enabled: false
 conjoint:
+  enabled: false
+career:
   enabled: false
 # **********************
 # Platform Workers
