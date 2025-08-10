@@ -3,7 +3,35 @@ entries:
   client:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-07-30T08:09:11.651647954+03:30"
+    created: "2025-08-10T07:47:19.959160486+03:30"
+    dependencies:
+    - condition: services.enabled
+      name: services
+      repository: file://charts/services
+      version: 1.1.0
+    - condition: workers.enabled
+      name: workers
+      repository: file://charts/workers
+      version: 1.1.0
+    - condition: assets.enabled
+      name: assets
+      repository: file://charts/assets
+      version: 1.1.0
+    - condition: frontend.enabled
+      name: frontend
+      repository: file://charts/frontend
+      version: 1.1.0
+    description: A Helm chart for Kubernetes
+    digest: b17a84eb5756f02b2b82795ae14f6ad5d4a46292ad86f5a6efe8c9f8df5b0351
+    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
+    name: client
+    type: application
+    urls:
+    - client-1.1.3.tgz
+    version: 1.1.3
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2025-08-10T07:47:19.958351087+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -31,7 +59,7 @@ entries:
     version: 1.1.2
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-07-30T08:09:11.650838224+03:30"
+    created: "2025-08-10T07:47:19.957549413+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -59,7 +87,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-07-30T08:09:11.650008851+03:30"
+    created: "2025-08-10T07:47:19.95673729+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -88,7 +116,7 @@ entries:
   platform:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-07-30T08:09:11.660791506+03:30"
+    created: "2025-08-10T07:47:19.97029493+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -172,7 +200,7 @@ entries:
     version: 1.1.3
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-07-30T08:09:11.658645267+03:30"
+    created: "2025-08-10T07:47:19.967264987+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -252,7 +280,7 @@ entries:
     version: 1.1.2
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-07-30T08:09:11.656126148+03:30"
+    created: "2025-08-10T07:47:19.965048076+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -328,7 +356,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-07-30T08:09:11.654044415+03:30"
+    created: "2025-08-10T07:47:19.96181692+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -398,4 +426,4 @@ entries:
     urls:
     - platform-1.1.0.tgz
     version: 1.1.0
-generated: "2025-07-30T08:09:11.649008359+03:30"
+generated: "2025-08-10T07:47:19.955765579+03:30"
