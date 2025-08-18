@@ -2,6 +2,7 @@
   "cSpell.words": [
     "altcha",
     "automount",
+    "cnpg",
     "Coturn",
     "EMQX",
     "exhook",
@@ -21,5 +22,6 @@
     "Vahid",
     "vhidvz",
     "wenex"
-  ]
+  ],
+  "editor.formatOnSave": false
 }

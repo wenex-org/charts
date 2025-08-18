@@ -180,6 +180,19 @@ Create the environments variable
   value: {{ .Values.global.environments.mongo.pass | quote }}
 - name: MONGO_QUERY
   value: {{ .Values.global.environments.mongo.query | default "replicaSet=rs0&authSource=admin" | quote }}
+# PostgreSQL
+- name: POSTGRES_DB
+  value: {{ .Values.global.environments.postgres.db | default "wenex" | quote }}
+- name: POSTGRES_PREFIX
+  value: {{ .Values.global.environments.postgres.prefix | default "wnx" | quote }}
+- name: POSTGRES_USER
+  value: {{ .Values.global.environments.postgres.user | default "postgres" | quote }}
+- name: POSTGRES_PASSWORD
+  value: {{ .Values.global.environments.postgres.password | quote }}
+- name: POSTGRES_PORT
+  value: {{ .Values.global.environments.postgres.port | default "5432" | quote }}
+- name: POSTGRES_HOST
+  value: {{ .Values.global.environments.postgres.host | default "postgres-cluster-rw.cnpg-system.svc.cluster.local" | quote }}
 # Elasticsearch
 - name: ELASTIC_PREFIX
   value: {{ .Values.global.environments.elasticsearch.prefix | default "wnx" | quote }}
@@ -242,4 +255,12 @@ Create the environments variable
   value: {{ .Values.global.environments.apm.secretToken | quote }}
 - name: ELASTIC_APM_VERIFY_SERVER_CERT
   value: {{ .Values.global.environments.apm.verifyServerCert | default "false" | quote }}
+# **********************
+# Application Configs
+# **********************
+# Cleaner Worker
+- name: CLEANER_AUDIT_LOGS_TTL
+  value: {{ .Values.global.environments.cleaner.auditLogsTTL | default "4years" | quote }}
+- name: CLEANER_SAGA_STAGES_TTL
+  value: {{ .Values.global.environments.cleaner.sagaStagesTTL | default "1year" | quote }}
 {{- end }}

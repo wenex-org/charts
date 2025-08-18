@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "logger.fullname" . }}
+  labels:
+    {{- include "logger.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - name: {{ (index .Values.service.ports 0).name | default "http" | quote }}
+      port: {{ (index .Values.service.ports 0).port | default 80 | int }}
+      targetPort: {{ .Values.global.configuration.logger.api | default 80 | int }}
+      protocol: {{ (index .Values.service.ports 0).protocol | default "TCP" | quote | upper }}
+    - name: {{ (index .Values.service.ports 1).name | default "grpc" | quote }}
+      port: {{ (index .Values.service.ports 1).port | default 8080 | int }}
+      targetPort: {{ .Values.global.configuration.logger.grpc | default 8080 | int }}
+      protocol: {{ (index .Values.service.ports 1).protocol | default "TCP" | quote | upper }}
+  selector:
+    {{- include "logger.selectorLabels" . | nindent 4 }}

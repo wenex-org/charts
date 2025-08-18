@@ -76,6 +76,14 @@ global:
       user: "databaseAdmin"
       pass: ""
       query: "replicaSet=rs0&authSource=admin"
+    # PostgreSQL
+    postgres:
+      db: "wenex"
+      prefix: "wnx"
+      user: "postgres"
+      password: ""
+      port: "5432"
+      host: "postgres-cluster-rw.cnpg-system.svc.cluster.local"
     # ElasticSearch
     elasticsearch:
       prefix: "wnx"
@@ -126,6 +134,13 @@ global:
       serverUrl: ""
       secretToken: ""
       verifyServerCert: "false"
+    # **********************
+    # Application Configs
+    # **********************
+    # Cleaner Worker
+    cleaner:
+      auditLogsTTL: "4years"
+      sagaStagesTTL: "1year"
   # **********************
   # Platform Configuration
   # **********************
@@ -172,6 +187,10 @@ global:
       host: platform-dispatcher.wenex-platform.svc.cluster.local
     publisher:
       host: platform-publisher.wenex-platform.svc.cluster.local
+    logger:
+      host: platform-logger.wenex-platform.svc.cluster.local
+    cleaner:
+      host: platform-cleaner.wenex-platform.svc.cluster.local
 # **********************
 # Platform Services
 # **********************
@@ -213,4 +232,8 @@ preserver:
 dispatcher:
   enabled: false
 publisher:
+  enabled: false
+logger:
+  enabled: false
+cleaner:
   enabled: false
