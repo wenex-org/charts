@@ -261,6 +261,8 @@ Create the environments variable
 # Cleaner Worker
 - name: CLEANER_AUDIT_LOGS_TTL
   value: {{ .Values.global.environments.cleaner.auditLogsTTL | default "4years" | quote }}
+- name: CLEANER_STASH_LOGS_TTL
+  value: {{ .Values.global.environments.cleaner.stashLogsTTL | default "100day" | quote }}
 - name: CLEANER_SAGA_STAGES_TTL
   value: {{ .Values.global.environments.cleaner.sagaStagesTTL | default "1year" | quote }}
 {{- end }}

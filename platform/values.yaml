@@ -140,6 +140,7 @@ global:
     # Cleaner Worker
     cleaner:
       auditLogsTTL: "4years"
+      stashLogsTTL: "100day"
       sagaStagesTTL: "1year"
   # **********************
   # Platform Configuration
