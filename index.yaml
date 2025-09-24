@@ -3,7 +3,35 @@ entries:
   client:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-09-17T12:39:25.410772038+03:30"
+    created: "2025-09-24T13:56:13.552465453+03:30"
+    dependencies:
+    - condition: services.enabled
+      name: services
+      repository: file://charts/services
+      version: 1.1.0
+    - condition: workers.enabled
+      name: workers
+      repository: file://charts/workers
+      version: 1.1.0
+    - condition: assets.enabled
+      name: assets
+      repository: file://charts/assets
+      version: 1.1.0
+    - condition: frontend.enabled
+      name: frontend
+      repository: file://charts/frontend
+      version: 1.1.0
+    description: A Helm chart for Kubernetes
+    digest: a7d76f1a3c2d6148e0e0910ad908df1dae669615b192539952b78e5f325484cc
+    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
+    name: client
+    type: application
+    urls:
+    - client-1.1.4.tgz
+    version: 1.1.4
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2025-09-24T13:56:13.55086815+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -31,7 +59,7 @@ entries:
     version: 1.1.3
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-09-17T12:39:25.408861469+03:30"
+    created: "2025-09-24T13:56:13.550032271+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -59,7 +87,7 @@ entries:
     version: 1.1.2
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-09-17T12:39:25.408028388+03:30"
+    created: "2025-09-24T13:56:13.549054091+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -87,7 +115,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-09-17T12:39:25.407204793+03:30"
+    created: "2025-09-24T13:56:13.548027584+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -116,7 +144,99 @@ entries:
   platform:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-09-17T12:39:25.426101265+03:30"
+    created: "2025-09-24T13:56:13.570584935+03:30"
+    dependencies:
+    - condition: auth.enabled
+      name: auth
+      repository: file://charts/auth
+      version: 1.1.0
+    - condition: domain.enabled
+      name: domain
+      repository: file://charts/domain
+      version: 1.1.0
+    - condition: context.enabled
+      name: context
+      repository: file://charts/context
+      version: 1.1.0
+    - condition: essential.enabled
+      name: essential
+      repository: file://charts/essential
+      version: 1.1.0
+    - condition: financial.enabled
+      name: financial
+      repository: file://charts/financial
+      version: 1.1.0
+    - condition: general.enabled
+      name: general
+      repository: file://charts/general
+      version: 1.1.0
+    - condition: identity.enabled
+      name: identity
+      repository: file://charts/identity
+      version: 1.1.0
+    - condition: special.enabled
+      name: special
+      repository: file://charts/special
+      version: 1.1.0
+    - condition: touch.enabled
+      name: touch
+      repository: file://charts/touch
+      version: 1.1.0
+    - condition: content.enabled
+      name: content
+      repository: file://charts/content
+      version: 1.1.0
+    - condition: logistic.enabled
+      name: logistic
+      repository: file://charts/logistic
+      version: 1.1.0
+    - condition: conjoint.enabled
+      name: conjoint
+      repository: file://charts/conjoint
+      version: 1.1.0
+    - condition: career.enabled
+      name: career
+      repository: file://charts/career
+      version: 1.1.0
+    - condition: watcher.enabled
+      name: watcher
+      repository: file://charts/watcher
+      version: 1.1.0
+    - condition: observer.enabled
+      name: observer
+      repository: file://charts/observer
+      version: 1.1.0
+    - condition: preserver.enabled
+      name: preserver
+      repository: file://charts/preserver
+      version: 1.1.0
+    - condition: dispatcher.enabled
+      name: dispatcher
+      repository: file://charts/dispatcher
+      version: 1.1.0
+    - condition: publisher.enabled
+      name: publisher
+      repository: file://charts/publisher
+      version: 1.1.0
+    - condition: logger.enabled
+      name: logger
+      repository: file://charts/logger
+      version: 1.1.0
+    - condition: cleaner.enabled
+      name: cleaner
+      repository: file://charts/cleaner
+      version: 1.1.0
+    description: A Helm chart for Kubernetes
+    digest: eba01678cd88d811d37c742f8c8f272430dee84bf65f8eda1a9248dea236bef1
+    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
+    name: platform
+    type: application
+    urls:
+    - platform-1.1.6.tgz
+    version: 1.1.6
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2025-09-24T13:56:13.56768848+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -208,7 +328,7 @@ entries:
     version: 1.1.5
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-09-17T12:39:25.423242502+03:30"
+    created: "2025-09-24T13:56:13.5650242+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -300,7 +420,7 @@ entries:
     version: 1.1.4
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-09-17T12:39:25.420584312+03:30"
+    created: "2025-09-24T13:56:13.562026292+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -384,7 +504,7 @@ entries:
     version: 1.1.3
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-09-17T12:39:25.417718186+03:30"
+    created: "2025-09-24T13:56:13.559702584+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -464,7 +584,7 @@ entries:
     version: 1.1.2
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-09-17T12:39:25.415427989+03:30"
+    created: "2025-09-24T13:56:13.557036727+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -540,7 +660,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-09-17T12:39:25.412724066+03:30"
+    created: "2025-09-24T13:56:13.554907868+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -610,4 +730,4 @@ entries:
     urls:
     - platform-1.1.0.tgz
     version: 1.1.0
-generated: "2025-09-17T12:39:25.406246096+03:30"
+generated: "2025-09-24T13:56:13.547032745+03:30"
