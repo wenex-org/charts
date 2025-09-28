@@ -15,16 +15,16 @@ livenessProbe:
   httpGet:
     path: /status
     port: http
-  initialDelaySeconds: 30
-  periodSeconds: 10
+  initialDelaySeconds: 90
+  periodSeconds: 30
   failureThreshold: 3
 
 readinessProbe:
   httpGet:
     path: /status
     port: http
-  initialDelaySeconds: 15
-  periodSeconds: 5
+  initialDelaySeconds: 45
+  periodSeconds: 15
   failureThreshold: 3
 
 ingress:
