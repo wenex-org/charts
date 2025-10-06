@@ -218,8 +218,6 @@ Create the environments variable
   value: {{ .Values.global.environments.mongo.pass | quote }}
 - name: MONGO_QUERY
   value: {{ .Values.global.environments.mongo.query | default "replicaSet=rs0&authSource=admin" | quote }}
-- name: MONGO_LOAD_BALANCED
-  value: {{ .Values.global.environments.mongo.loadBalanced | default "true" | quote }}
 # **********************
 # Broker Services
 # **********************
