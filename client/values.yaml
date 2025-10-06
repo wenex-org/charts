@@ -108,6 +108,7 @@ global:
       user: "databaseAdmin"
       pass: ""
       query: "replicaSet=rs0&authSource=admin"
+      loadBalanced: "true"
     # **********************
     # Broker Services
     # **********************
