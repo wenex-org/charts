@@ -97,6 +97,7 @@ Create the secrets variable
 # **********************
 # Coworkers Secrets
 # **********************
+# PHC Client
 - name: INIT_PHC_ROOT_PASSWORD
   valueFrom:
     secretKeyRef:
@@ -107,6 +108,17 @@ Create the secrets variable
     secretKeyRef:
       name: client-init-secrets
       key: INIT_PHC_CLIENT_SECRET
+# RSCH Client
+- name: INIT_RSCH_ROOT_PASSWORD
+  valueFrom:
+    secretKeyRef:
+      name: client-init-secrets
+      key: INIT_RSCH_ROOT_PASSWORD
+- name: INIT_RSCH_CLIENT_SECRET
+  valueFrom:
+    secretKeyRef:
+      name: client-init-secrets
+      key: INIT_RSCH_CLIENT_SECRET
 {{- end }}
 
 {{/*
