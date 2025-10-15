@@ -3,7 +3,7 @@ entries:
   client:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.131228699+03:30"
+    created: "2025-10-15T20:03:16.558051275+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -31,7 +31,7 @@ entries:
     version: 1.1.7
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.130412955+03:30"
+    created: "2025-10-15T20:03:16.556800495+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -59,7 +59,7 @@ entries:
     version: 1.1.6
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.129617781+03:30"
+    created: "2025-10-15T20:03:16.555515224+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -87,7 +87,7 @@ entries:
     version: 1.1.5
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.128799256+03:30"
+    created: "2025-10-15T20:03:16.55377639+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -115,7 +115,7 @@ entries:
     version: 1.1.4
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.127932007+03:30"
+    created: "2025-10-15T20:03:16.552161385+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -143,7 +143,7 @@ entries:
     version: 1.1.3
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.126660101+03:30"
+    created: "2025-10-15T20:03:16.550280035+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -171,7 +171,7 @@ entries:
     version: 1.1.2
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.125813857+03:30"
+    created: "2025-10-15T20:03:16.549175518+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -199,7 +199,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.124872201+03:30"
+    created: "2025-10-15T20:03:16.547944292+03:30"
     dependencies:
     - condition: services.enabled
       name: services
@@ -228,7 +228,99 @@ entries:
   platform:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.139084057+03:30"
+    created: "2025-10-15T20:03:16.572682809+03:30"
+    dependencies:
+    - condition: auth.enabled
+      name: auth
+      repository: file://charts/auth
+      version: 1.1.3
+    - condition: domain.enabled
+      name: domain
+      repository: file://charts/domain
+      version: 1.1.3
+    - condition: context.enabled
+      name: context
+      repository: file://charts/context
+      version: 1.1.3
+    - condition: essential.enabled
+      name: essential
+      repository: file://charts/essential
+      version: 1.1.3
+    - condition: financial.enabled
+      name: financial
+      repository: file://charts/financial
+      version: 1.1.3
+    - condition: general.enabled
+      name: general
+      repository: file://charts/general
+      version: 1.1.3
+    - condition: identity.enabled
+      name: identity
+      repository: file://charts/identity
+      version: 1.1.3
+    - condition: special.enabled
+      name: special
+      repository: file://charts/special
+      version: 1.1.3
+    - condition: touch.enabled
+      name: touch
+      repository: file://charts/touch
+      version: 1.1.3
+    - condition: content.enabled
+      name: content
+      repository: file://charts/content
+      version: 1.1.3
+    - condition: logistic.enabled
+      name: logistic
+      repository: file://charts/logistic
+      version: 1.1.3
+    - condition: conjoint.enabled
+      name: conjoint
+      repository: file://charts/conjoint
+      version: 1.1.3
+    - condition: career.enabled
+      name: career
+      repository: file://charts/career
+      version: 1.1.3
+    - condition: watcher.enabled
+      name: watcher
+      repository: file://charts/watcher
+      version: 1.1.3
+    - condition: observer.enabled
+      name: observer
+      repository: file://charts/observer
+      version: 1.1.3
+    - condition: preserver.enabled
+      name: preserver
+      repository: file://charts/preserver
+      version: 1.1.3
+    - condition: dispatcher.enabled
+      name: dispatcher
+      repository: file://charts/dispatcher
+      version: 1.1.3
+    - condition: publisher.enabled
+      name: publisher
+      repository: file://charts/publisher
+      version: 1.1.3
+    - condition: logger.enabled
+      name: logger
+      repository: file://charts/logger
+      version: 1.1.3
+    - condition: cleaner.enabled
+      name: cleaner
+      repository: file://charts/cleaner
+      version: 1.1.3
+    description: A Helm chart for Kubernetes
+    digest: 5c981feb5aaac31847e8b91728c1ba11d777bb69dc83047aeccf4465421d8ac9
+    icon: https://artifacthub.io/image/8dee5d2f-5946-4fb5-b0a8-265ff014cdc1@1x
+    name: platform
+    type: application
+    urls:
+    - platform-1.1.11.tgz
+    version: 1.1.11
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2025-10-15T20:03:16.568816978+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -320,7 +412,7 @@ entries:
     version: 1.1.10
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.16161692+03:30"
+    created: "2025-10-15T20:03:16.599903551+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -412,7 +504,7 @@ entries:
     version: 1.1.9
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.158547508+03:30"
+    created: "2025-10-15T20:03:16.595687151+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -504,7 +596,7 @@ entries:
     version: 1.1.8
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.155164149+03:30"
+    created: "2025-10-15T20:03:16.592160147+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -596,7 +688,7 @@ entries:
     version: 1.1.7
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.152163415+03:30"
+    created: "2025-10-15T20:03:16.587963681+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -688,7 +780,7 @@ entries:
     version: 1.1.6
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.149201385+03:30"
+    created: "2025-10-15T20:03:16.584812793+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -780,7 +872,7 @@ entries:
     version: 1.1.5
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.14669988+03:30"
+    created: "2025-10-15T20:03:16.581380794+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -872,7 +964,7 @@ entries:
     version: 1.1.4
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.143712052+03:30"
+    created: "2025-10-15T20:03:16.57846941+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -956,7 +1048,7 @@ entries:
     version: 1.1.3
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.141379272+03:30"
+    created: "2025-10-15T20:03:16.575758155+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -1036,7 +1128,7 @@ entries:
     version: 1.1.2
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.135648161+03:30"
+    created: "2025-10-15T20:03:16.5644721+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -1112,7 +1204,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-10-15T10:48:01.133613885+03:30"
+    created: "2025-10-15T20:03:16.561949342+03:30"
     dependencies:
     - condition: auth.enabled
       name: auth
@@ -1182,4 +1274,4 @@ entries:
     urls:
     - platform-1.1.0.tgz
     version: 1.1.0
-generated: "2025-10-15T10:48:01.123848409+03:30"
+generated: "2025-10-15T20:03:16.54684567+03:30"

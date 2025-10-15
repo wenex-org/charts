@@ -3,89 +3,89 @@ name: platform
 description: A Helm chart for Kubernetes
 
 type: application
-version: 1.1.10
+version: 1.1.11
 appVersion: "1.1.0"
 
 dependencies:
   - name: auth
-    version: 1.1.2
+    version: 1.1.3
     condition: auth.enabled
     repository: file://charts/auth
   - name: domain
-    version: 1.1.2
+    version: 1.1.3
     condition: domain.enabled
     repository: file://charts/domain
   - name: context
-    version: 1.1.2
+    version: 1.1.3
     condition: context.enabled
     repository: file://charts/context
   - name: essential
-    version: 1.1.2
+    version: 1.1.3
     condition: essential.enabled
     repository: file://charts/essential
   - name: financial
-    version: 1.1.2
+    version: 1.1.3
     condition: financial.enabled
     repository: file://charts/financial
   - name: general
-    version: 1.1.2
+    version: 1.1.3
     condition: general.enabled
     repository: file://charts/general
   - name: identity
-    version: 1.1.2
+    version: 1.1.3
     condition: identity.enabled
     repository: file://charts/identity
   - name: special
-    version: 1.1.2
+    version: 1.1.3
     condition: special.enabled
     repository: file://charts/special
   - name: touch
-    version: 1.1.2
+    version: 1.1.3
     condition: touch.enabled
     repository: file://charts/touch
   - name: content
-    version: 1.1.2
+    version: 1.1.3
     condition: content.enabled
     repository: file://charts/content
   - name: logistic
-    version: 1.1.2
+    version: 1.1.3
     condition: logistic.enabled
     repository: file://charts/logistic
   - name: conjoint
-    version: 1.1.2
+    version: 1.1.3
     condition: conjoint.enabled
     repository: file://charts/conjoint
   - name: career
-    version: 1.1.2
+    version: 1.1.3
     condition: career.enabled
     repository: file://charts/career
 
   - name: watcher
-    version: 1.1.2
+    version: 1.1.3
     condition: watcher.enabled
     repository: file://charts/watcher
   - name: observer
-    version: 1.1.2
+    version: 1.1.3
     condition: observer.enabled
     repository: file://charts/observer
   - name: preserver
-    version: 1.1.2
+    version: 1.1.3
     condition: preserver.enabled
     repository: file://charts/preserver
   - name: dispatcher
-    version: 1.1.2
+    version: 1.1.3
     condition: dispatcher.enabled
     repository: file://charts/dispatcher
   - name: publisher
-    version: 1.1.2
+    version: 1.1.3
     condition: publisher.enabled
     repository: file://charts/publisher
   - name: logger
-    version: 1.1.2
+    version: 1.1.3
     condition: logger.enabled
     repository: file://charts/logger
   - name: cleaner
-    version: 1.1.2
+    version: 1.1.3
     condition: cleaner.enabled
     repository: file://charts/cleaner
 
