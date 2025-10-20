@@ -119,6 +119,17 @@ Create the secrets variable
     secretKeyRef:
       name: client-init-secrets
       key: INIT_RSCH_CLIENT_SECRET
+# COPD Client
+- name: INIT_COPD_ROOT_PASSWORD
+  valueFrom:
+    secretKeyRef:
+      name: client-init-secrets
+      key: INIT_COPD_ROOT_PASSWORD
+- name: INIT_COPD_CLIENT_SECRET
+  valueFrom:
+    secretKeyRef:
+      name: client-init-secrets
+      key: INIT_COPD_CLIENT_SECRET
 {{- end }}
 
 {{/*
