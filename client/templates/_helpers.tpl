@@ -97,6 +97,17 @@ Create the secrets variable
 # **********************
 # Coworkers Secrets
 # **********************
+# LND Client
+- name: INIT_LND_ROOT_PASSWORD
+  valueFrom:
+    secretKeyRef:
+      name: client-init-secrets
+      key: INIT_LND_ROOT_PASSWORD
+- name: INIT_LND_CLIENT_SECRET
+  valueFrom:
+    secretKeyRef:
+      name: client-init-secrets
+      key: INIT_LND_CLIENT_SECRET
 # PHC Client
 - name: INIT_PHC_ROOT_PASSWORD
   valueFrom:

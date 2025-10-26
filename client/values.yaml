@@ -27,6 +27,9 @@ global:
   # **********************
   secrets:
     init:
+      lnd:
+        rootPassword: "" # default: random 40 chars
+        clientSecret: "" # default: random 40 chars
       phc:
         rootPassword: "" # default: random 40 chars
         clientSecret: "" # default: random 40 chars
