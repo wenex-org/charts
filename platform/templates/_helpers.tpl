@@ -226,6 +226,9 @@ Create the environments variable
 # **********************
 # OpenStreetMap
 # **********************
+# Valhalla
+- name: VALHALLA_API_BASE_URL
+  value: {{ .Values.global.environments.valhalla.apiBaseUrl | quote }}
 # Nominatim
 - name: NOMINATIM_API_BASE_URL
   value: {{ .Values.global.environments.nominatim.apiBaseUrl | quote }}
@@ -259,6 +262,10 @@ Create the environments variable
 # Application Configs
 # **********************
 # Cleaner Worker
+- name: CLEANER_STATS_TTL
+  value: {{ .Values.global.environments.cleaner.statsTTL | default "10years" | quote }}
+- name: CLEANER_METRICS_TTL
+  value: {{ .Values.global.environments.cleaner.metricsTTL | default "5years" | quote }}
 - name: CLEANER_AUDIT_LOGS_TTL
   value: {{ .Values.global.environments.cleaner.auditLogsTTL | default "4years" | quote }}
 - name: CLEANER_STASH_LOGS_TTL

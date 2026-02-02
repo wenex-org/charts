@@ -125,6 +125,9 @@ global:
     # **********************
     # OpenStreetMap
     # **********************
+    # Valhalla
+    valhalla:
+      apiBaseUrl: "http://valhalla.openstreetmap.svc.cluster.local"
     # Nominatim
     nominatim:
       apiBaseUrl: "http://mediagis-nominatim.openstreetmap.svc.cluster.local"
@@ -155,6 +158,8 @@ global:
     # **********************
     # Cleaner Worker
     cleaner:
+      statsTTL: "10years"
+      metricsTTL: "5years"
       auditLogsTTL: "4years"
       stashLogsTTL: "100day"
       sagaStagesTTL: "1year"
@@ -191,6 +196,8 @@ global:
       host: platform-conjoint.wenex-platform.svc.cluster.local
     career:
       host: platform-career.wenex-platform.svc.cluster.local
+    thing:
+      host: platform-thing.wenex-platform.svc.cluster.local
     # **********************
     # Platform Workers
     # **********************
@@ -236,6 +243,8 @@ logistic:
 conjoint:
   enabled: false
 career:
+  enabled: false
+thing:
   enabled: false
 # **********************
 # Platform Workers
