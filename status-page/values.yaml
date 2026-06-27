@@ -1,4 +1,11 @@
+# SQLite is single-writer: the app stores one DB file at persistence.mountPath,
+# so this chart runs a single replica. Do not raise without changing the storage model.
 replicaCount: 1
+
+# Recreate (not RollingUpdate) so the RWO data volume is released by the old
+# pod before the replacement pod mounts it.
+strategy:
+  type: Recreate
 
 fullnameOverride: "status-page"
 
@@ -10,6 +17,17 @@ service:
   type: ClusterIP
   port: 80
   targetPort: 1045
+
+persistence:
+  enabled: true
+  storageClass: ""          # "" = use the cluster default StorageClass
+  accessModes:
+    - ReadWriteOnce
+  size: 1Gi
+  mountPath: /app/data
+  # A chart-templated PVC is deleted on `helm uninstall`. To keep data, set:
+  #   helm.sh/resource-policy: keep
+  annotations: {}
 
 livenessProbe:
   httpGet:
