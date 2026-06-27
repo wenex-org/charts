@@ -62,18 +62,6 @@ Create the name of the service account to use
 {{- end }}
 
 {{/*
-Create the configuration variables
-*/}}
-{{- define "status-page.global.configuration" -}}
-{{- range $service, $config := .Values.global.configuration }}
-- name: {{ $service | upper }}_HOST
-  value: {{ $config.host | quote }}
-- name: {{ $service | upper }}_API_PORT
-  value: {{ $config.api | default "80" | quote }}
-{{- end }}
-{{- end }}
-
-{{/*
 Create the envs variable
 */}}
 {{- define "status-page.global.envs" -}}

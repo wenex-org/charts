@@ -7,6 +7,7 @@ This repository hosts Helm charts for deploying Wenex to Kubernetes clusters.
 3. Update the Helm repository index using:
 
 ```sh
+# helm package status-page && helm repo index .
 helm package platform && helm package client && helm repo index .
 ```
 
