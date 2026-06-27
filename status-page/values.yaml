@@ -67,7 +67,7 @@ global:
   # **********************
   # Secrets
   # **********************
-  secrets: {}
+  secrets:
     # Default admin credentials (used only when seeding an empty database)
-    # adminUsername: admin
-    # adminPassword: admin
+    adminUsername: admin
+    adminPassword: admin
