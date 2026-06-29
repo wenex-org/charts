@@ -108,6 +108,17 @@ Create the secrets variable
     secretKeyRef:
       name: client-init-secrets
       key: INIT_LND_CLIENT_SECRET
+# HAI Client
+- name: INIT_HAI_ROOT_PASSWORD
+  valueFrom:
+    secretKeyRef:
+      name: client-init-secrets
+      key: INIT_HAI_ROOT_PASSWORD
+- name: INIT_HAI_CLIENT_SECRET
+  valueFrom:
+    secretKeyRef:
+      name: client-init-secrets
+      key: INIT_HAI_CLIENT_SECRET
 # PHC Client
 - name: INIT_PHC_ROOT_PASSWORD
   valueFrom:

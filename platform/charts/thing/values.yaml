@@ -1,0 +1,41 @@
+enabled: false
+
+replicaCount: 3
+
+fullnameOverride: "platform-thing"
+
+serviceAccount:
+  create: true
+  automount: true
+
+service:
+  type: ClusterIP
+  ports:
+    - port: 80
+      protocol: TCP
+      name: http
+    - port: 8080
+      protocol: TCP
+      name: grpc
+
+livenessProbe:
+  httpGet:
+    path: /status
+    port: http
+  initialDelaySeconds: 30
+  periodSeconds: 10
+  failureThreshold: 3
+
+readinessProbe:
+  httpGet:
+    path: /status
+    port: http
+  initialDelaySeconds: 15
+  periodSeconds: 5
+  failureThreshold: 3
+
+ingress:
+  enabled: false
+
+autoscaling:
+  enabled: false

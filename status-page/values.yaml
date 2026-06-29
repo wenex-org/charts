@@ -1,0 +1,73 @@
+# SQLite is single-writer: the app stores one DB file at persistence.mountPath,
+# so this chart runs a single replica. Do not raise without changing the storage model.
+replicaCount: 1
+
+# Recreate (not RollingUpdate) so the RWO data volume is released by the old
+# pod before the replacement pod mounts it.
+strategy:
+  type: Recreate
+
+fullnameOverride: "status-page"
+
+serviceAccount:
+  create: true
+  automount: true
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 1045
+
+persistence:
+  enabled: true
+  storageClass: ""          # "" = use the cluster default StorageClass
+  accessModes:
+    - ReadWriteOnce
+  size: 1Gi
+  mountPath: /app/data
+  # A chart-templated PVC is deleted on `helm uninstall`. To keep data, set:
+  #   helm.sh/resource-policy: keep
+  annotations: {}
+
+livenessProbe:
+  httpGet:
+    path: /status
+    port: http
+  initialDelaySeconds: 30
+  periodSeconds: 10
+  failureThreshold: 3
+
+readinessProbe:
+  httpGet:
+    path: /status
+    port: http
+  initialDelaySeconds: 15
+  periodSeconds: 5
+  failureThreshold: 3
+
+ingress:
+  enabled: false
+
+autoscaling:
+  enabled: false
+
+global:
+  image:
+    repository: wenex/status-page
+    pullPolicy: IfNotPresent
+    tag: "latest"
+  # **********************
+  # Environment Variables
+  # **********************
+  envs:
+    # History retention in days (older rows are pruned daily)
+    retentionDays: 90
+    # HTTP timeout (ms) for each resource health check
+    checkTimeoutMs: 10000
+  # **********************
+  # Secrets
+  # **********************
+  secrets:
+    # Default admin credentials (used only when seeding an empty database)
+    adminUsername: admin
+    adminPassword: admin
