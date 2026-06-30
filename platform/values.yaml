@@ -198,6 +198,8 @@ global:
       host: platform-career.wenex-platform.svc.cluster.local
     thing:
       host: platform-thing.wenex-platform.svc.cluster.local
+    education:
+      host: platform-education.wenex-platform.svc.cluster.local
     # **********************
     # Platform Workers
     # **********************
@@ -245,6 +247,8 @@ conjoint:
 career:
   enabled: false
 thing:
+  enabled: false
+education:
   enabled: false
 # **********************
 # Platform Workers
